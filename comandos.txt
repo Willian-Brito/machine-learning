@@ -1,0 +1,7 @@
+python -m venv venv
+source venv/bin/activate
+pip install notebook
+jupyter notebook
+
+docker build -t dev_python .
+docker run -p 8888:8888 -v ./src:/home/jovyan dev_python
