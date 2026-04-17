@@ -2,7 +2,7 @@
 **Machine Learning (ML)** é uma área da **Inteligência Artificial** que permite que sistemas aprendam padrões a partir de dados e tomem decisões ou façam previsões sem serem explicitamente programados para cada regra. Em vez de regras fixas, você fornece dados + objetivo → o modelo aprende a “função”.
 
 ## 📚 Abordagens
-<img src="doc/img/aprendizados.png">
+<img src="doc/img/aprendizados-2.png">
 
 ### 🕵🏻 1. Aprendizado Supervisionado
 
@@ -39,7 +39,6 @@ Você tem dados sem rótulos.
 - **Clusterização →** agrupar dados similares
 - **Detecção de Anomalias →** encontrar comportamentos fora do padrão
 - **Redução de Dimensionalidade →** simplificar dados
-- **Sistemas de Recomendação** (em parte)
 
 #### Algoritmos comuns:
 - K-Means
@@ -94,29 +93,593 @@ Um agente aprende interagindo com o ambiente.
 - **Reforço:** aprende por tentativa e erro
 - Algoritmos variam conforme problema
 
-## ⚛ Tipos de Algoritmos (organizado por função)
+## ⚛ Tipos de Algoritmos
 
 <img src="doc/img/algoritmos-3.png">
 
-### 📊 Classificação
+### 🧠 Modelo vs Algoritmo
+Um **algoritmo de aprendizado de máquina** é o **procedimento e a lógica matemática** pelos quais uma "máquina" ou "modelo" (um sistema de IA) aprende a **identificar padrões** em dados de treinamento e a aplicar esse reconhecimento de padrões para fazer previsões precisas sobre novos dados, ou seja, um **modelo de IA** é qualquer programa que **recebe dados de entrada** e gera uma **previsão ou decisão sem maior intervenção humana**.
 
-#### Prever classes/categorias:
-- Logistic Regression
-- Decision Tree
+#### 🔷 Algoritmo
+
+É o **método ou conjunto de regras** usado para aprender com os dados.
+
+#### 📌  Ex:
+- Regressão Linear
 - Random Forest
-- SVM
-- KNN (K-Nearest Neighbors)
-- Naive Bayes
-- Redes Neurais (MLP, CNN)
+- K-Means
+
+#### 🔷 Modelo
+
+É o **resultado do treinamento do algoritmo com dados.**
+
+#### 📌 Ou seja:
+- o **modelo** é o **algoritmo “treinado”**
+
+#### 🛑 Exemplo prático
+#### 🏠 Prever preço de casa
+- **Algoritmo →** Regressão Linear
+- **Modelo →** equação aprendida com os dados
+
+```bash
+Preço = 2.000 * tamanho + 50.000
+Modelo = Algoritmo + Dados
+```
+👉 Essa equação é o modelo
 
 ### 📈 Regressão
 
 #### Prever valores contínuos:
-- Linear Regression
-- Ridge / Lasso
-- Decision Tree Regressor
-- Random Forest Regressor
-- Gradient Boosting
+1. Linear Regression
+1. Ridge / Lasso
+1. Decision Tree Regressor
+1. Random Forest Regressor
+1. Gradient Boosting
+
+### 📉 1. Linear Regression (Regressão Linear)
+
+<img src="doc/img/regressao-linear-2.png">
+
+#### 🧠 O que faz?
+Modela uma relação linear entre entrada e saída.
+
+#### 🤔 Quando usar:
+Quando a relação é **simples e aproximadamente linear**
+
+#### 💼 Use cases:
+- 🏠 Previsão de preço de imóveis
+- 💰 Estimar salário com base em experiência
+- 📈 Previsão de vendas com base em investimento em marketing
+
+#### 👉 Por que usar? 
+- Simples
+- Fácil de interpretar
+
+#### 📌 Equação 
+```bash
+Y = α + β * X
+Y = α (alfa) + β (beta) * X (variável independente)
+```
+
+#### Equações dos Coeficientes (alpha e beta):
+<img src="doc/img/equacao-regressao-linear-2.png">
+
+<img src="doc/img/equacao-regressao-linear-3.png">
+
+#### ⚙️ Como funciona?
+1. **Correlação** entre as variáveis
+1. **Inclinação** da linha de regressão
+1. Ponto de **interceptação** da linha de regressão quando o X for 0
+1. Calcula o **valor predito**
+
+#### 💡 Intuição:
+👉 “Qual a melhor linha que passa pelos pontos?”
+
+### 🧊 2. Ridge e Lasso (Regularização)
+<img src="doc/img/regressao-ridge-e-lasso.png">
+
+#### 🧠 O que faz?
+São variações da regressão linear que evitam **overfitting**.
+
+#### 🤔 Quando usar:
+Quando há **muitas variáveis** ou risco de overfitting
+
+#### 💼 Use cases:
+- 📊 Modelos com muitas features (ex: dados financeiros)
+- 🧬 Bioinformática (muitas variáveis, poucos dados)
+- 📈 Marketing → identificar quais variáveis impactam vendas
+
+#### 👉 Diferencial:
+- **Ridge →** estabiliza o modelo
+- **Lasso →** seleciona variáveis importantes
+
+#### 🔹 Ridge (L2)
+#### 📌 Equação (função de custo)
+<img src="doc/img/equacao-ridge.png">
+
+#### ⚙️ Como funciona?
+- Penaliza coeficientes grandes
+- Mantém todas as variáveis, mas reduz impacto
+
+#### 🔹 Lasso (L1)
+
+#### 📌 Equação
+<img src="doc/img/equacao-lasso.png">
+
+#### ⚙️ Como funciona?
+- Pode zerar coeficientes \
+👉 Faz seleção de variáveis
+
+#### 💡 Intuição:
+| Modelo | Comportamento          |
+| ------ | ---------------------- |
+| Ridge  | “encolhe” coeficientes |
+| Lasso  | elimina variáveis      |
+
+### 🌳 3. Decision Tree Regressor
+É um modelo de aprendizado supervisionado que faz previsões segmentando os dados em divisões hierárquicas baseadas em **regras de decisão**.
+
+<img src="doc/img/arvore-de-decisao.png">
+
+#### 🧠 O que faz?
+Divide os dados em regiões e faz **previsões por média**.
+
+#### 🤔 Quando usar:
+Quando há **relações não lineares e regras claras**
+
+#### 💼 Use cases:
+- 🏦 **Crédito →** estimar limite com base em perfil
+- 🛒 **E-commerce →** prever valor de compra por perfil
+- 🏥 **Saúde →** estimar risco com base em condições
+
+#### 👉 Por que usar?
+- Fácil de explicar (regras)
+- Funciona bem com dados complexos
+
+#### ⚙️ Como funciona?
+
+-  Cria divisões (splits):
+```bash
+se idade < 30 → grupo A
+senão → grupo B
+```
+-  Em cada folha: \
+👉 previsão = média dos valores
+
+#### 📌 Equação
+<img src="doc/img/equacao-arvore-de-decisao.png">
+
+####  📌 Critério
+Minimiza erro dentro dos grupos (variância)
+
+#### 💡 Intuição:
+👉 “quebra os dados em pedaços mais homogêneos”
+
+### 🌲 4. Random Forest Regressor
+
+<img src="doc/img/random-forest.png">
+
+#### 🧠 O que faz?
+Combina várias árvores de decisão.
+
+#### 🤔 Quando usar:
+Quando precisa de mais precisão e robustez
+
+#### 💼 Use cases:
+- 📦 Previsão de demanda de produtos
+- 🚗 Preço de carros usados
+- 🏭 Previsão de falhas em máquinas (manutenção preditiva)
+
+#### 👉 Por que usar?
+- Reduz overfitting
+- Mais estável que uma árvore só
+
+#### ⚙️ Como funciona?
+1. Cria várias árvores (com dados aleatórios)
+1. Cada árvore faz uma previsão
+1. Resultado final = média das previsões
+
+#### 📌 Equação
+<img src="doc/img/equacao-random-forest.png">
+
+#### 💡 Intuição:
+👉 “muitas opiniões → resposta mais estável”
+
+### 🚀 5. Gradient Boosting
+<img src="doc/img/gradient-boosting.png">
+
+#### 🧠 O que faz?
+Cria modelos sequenciais, onde cada um corrige o erro do anterior.
+
+#### 🤔 Quando usar:
+Quando precisa de alta performance e precisão
+
+#### 💼 Use cases:
+- 💳 Detecção de fraude (valor esperado)
+- 📈 Previsão de churn (valor de cliente)
+- 🏆 Competições (Kaggle)
+- 🛍️ Sistemas de recomendação
+
+#### 👉 Por que usar?
+- Excelente desempenho
+- Captura padrões complexos
+
+#### ⚙️ Como funciona?
+1. Primeiro modelo faz previsão
+1. Calcula o erro (resíduo)
+1. Próximo modelo aprende o erro
+1. Soma as previsões
+
+#### 📌 Equação
+<img src="doc/img/equacao-gradient-boosting.png">
+
+#### 💡 Intuição:
+👉 “cada modelo aprende com os erros do anterior”
+
+### ⚖️ Comparação geral
+| Modelo            | Tipo                | Ponto forte         |
+| ----------------- | ------------------- | ------------------- |
+| Linear            | Simples             | Interpretável       |
+| Ridge/Lasso       | Linear regularizado | Evita overfitting   |
+| Decision Tree     | Não linear          | Fácil interpretação |
+| Random Forest     | Ensemble            | Estável             |
+| Gradient Boosting | Ensemble sequencial | Alta performance    |
+
+### π Simbolos das Equações
+- **Σ (sigma) →** soma tudo
+- **λ (lambda) →** controla penalização
+- **β (beta) →** peso das variáveis
+- **ŷ (y chapéu) →** previsão
+- **N →** quantidade (dados ou modelos)
+- **γ (gama) →** peso no boosting
+- **h(x) →** modelo base
+
+### 📊 Classificação
+
+#### Prever classes/categorias:
+1. Logistic Regression
+1. Decision Tree
+1. Random Forest
+1. SVM
+1. KNN (K-Nearest Neighbors)
+1. Naive Bayes
+1. Redes Neurais (MLP, CNN)
+
+### 📈 1. Logistic Regression (Regressão Logística)
+A **regressão logística** é um modelo estatístico usado para **classificação binária**, onde a saída é uma probabilidade associada a uma das duas classes.
+
+<img src="doc/img/regressao-logistica.png">
+
+#### 🧠 O que faz?
+Modela a probabilidade de uma classe usando uma função logística (sigmoid).
+
+#### 🤔 Quando usar:
+Quando o problema é linear e interpretável
+
+#### 💼 Use cases:
+- 📧 Detecção de spam
+- 💳 Aprovação de crédito
+- 🏥 Diagnóstico (doença: sim/não)
+
+#### 👉 Por que usar?
+- Simples e rápido
+- Interpretável
+- Base forte estatística
+
+#### ⚙️ Como funciona?
+1. Combina variáveis linearmente
+1. Aplica função sigmoid
+1. Retorna probabilidade (0 a 1)
+
+#### 📌 Equação
+<img src="doc/img/equacao-regressao-logistica.png">
+
+#### 💡 Intuição:
+👉 “transforma uma reta (soma linear) em probabilidade”
+
+### 🌳 2. Decision Tree Classifier
+Uma árvore de decisão para classificação divide os dados em regras até chegar a uma decisão final (classe).
+
+<img src="doc/img/arvore-de-decisao-2.png">
+
+#### 🧠 O que faz?
+Cria regras para separar os dados em classes, utilizando o algoritmo C4.5 que faz a representações dos elementos em formato de grafos.
+
+#### 🤔 Quando usar:
+Quando precisa de um modelo interpretável e baseado em regras
+
+#### 💼 Use cases:
+- 💳 Aprovação de crédito
+- 🏥 Diagnóstico médico
+- 🛒 Classificação de clientes
+
+#### 👉 Por que usar?
+- Fácil de interpretar
+- Funciona bem com dados não lineares
+- Não precisa de normalização
+
+#### ⚙️ Como funciona?
+1. Escolhe a melhor variável para dividir os dados
+1. Cria regras (ex: idade < 30)
+1. Repete até chegar em folhas
+1. A folha define a classe
+
+#### 📌 Equação
+<img src="doc/img/equacao-arvore-de-decisao-2.png">
+
+#### 💡 Intuição:
+👉 “divide os dados até cada grupo ficar o mais puro possível”
+
+### 🌲 3. Random Forest Classifier
+Random Forest é um conjunto de várias árvores de decisão que trabalham juntas para melhorar a precisão.
+
+<img src="doc/img/random-forest.png">
+
+#### 🧠 O que faz?
+Combina várias árvores para tomar uma decisão final.
+
+#### 🤔 Quando usar:
+Quando precisa de mais precisão e reduzir overfitting
+
+#### 💼 Use cases:
+- 🚨 Detecção de fraude
+- 📧 Classificação de spam
+- 🧑‍🤝‍🧑 Segmentação de clientes
+
+#### 👉 Por que usar?
+- Reduz overfitting
+- Mais robusto que uma árvore só
+- Boa performance geral
+
+#### ⚙️ Como funciona?
+1. Cria várias árvores com dados aleatórios
+1. Cada árvore faz uma previsão
+1. Resultado final = votação da maioria
+
+#### 📌 Equação
+<img src="doc/img/equacao-random-forest-2.png">
+
+#### 💡 Intuição:
+👉 “várias árvores votam e vence a maioria”
+
+### 📏 4. SVM (Support Vector Machine)
+<img src="doc/img/svn-3.png">
+
+#### 🧠 O que faz?
+Encontra a melhor fronteira que separa as classes.
+
+#### 🤔 Quando usar:
+Quando os dados são **separáveis (linear ou não)**
+
+#### ⚙️ Truque do Kernel
+Um **Kernel**,  em aprendizagem de máquina, é um modelo matemático que permite calcular a distância entre dois pontos x e y, num espaço diferente do espaço original.
+
+#### ⚫ Tipos de Kernel
+- **Kernel Linear:** não introduz nenhuma deformação no espaço, simplesmente trabalha no espaço original procurando o separador linear.
+- **Kernel Polinomial:** equivalente a criar novas features a partir de polinômios que usam as features originais.
+- **Kernel Gaussiano ou Raial (ou RBF: radial basis function):** baseado na distribuição normal, permite controlar a velocidade de variação da fronteira separadora.
+
+<img src="doc/img/svn-4.png">
+
+<img src="doc/img/svn-5.png">
+
+#### 💼 Use cases:
+- 🧬 Classificação genética
+- 🖼️ Reconhecimento de imagem
+- 📄 Classificação de textos
+
+#### 👉 Por que usar?
+- Funciona bem em alta dimensão
+- Pode usar kernels (não linear)
+
+#### ⚙️ Como funciona?
+1. Encontra uma linha/hiperplano separador
+1. Maximiza a margem entre classes
+1. Usa pontos críticos (support vectors)
+
+#### 📌 Equação
+<img src="doc/img/equacao-svm.png">
+
+#### 💡 Intuição:
+👉 “separa as classes com a maior margem possível”
+
+### 👥 5. KNN (K-Nearest Neighbors)
+Esse é um processo baseado em instâncias, **não propriamente tem aprendizado** no resultado implementado.
+
+A cada nova classificação que se deseja realizar, é necessário medir/calcular a distância desta nova observação com o resto do conjunto de dados utilizados no treino.
+
+<img src="doc/img/knn.png">
+
+#### 🧠 O que faz?
+Classifica baseado nos **vizinhos mais próximos**
+
+#### 🤔 Quando usar:
+Quando os dados têm padrões locais
+
+#### 💼 Use cases:
+- 🛒 Recomendação simples
+- 🧑‍🤝‍🧑 Segmentação de clientes
+- 🖼️ Classificação de imagens simples
+
+#### 👉 Por que usar?
+- Simples
+- Não precisa de treino
+- Fácil de entender
+
+#### ⚙️ Como funciona?
+1. Calcula distância entre pontos
+1. Seleciona os K mais próximos
+1. Classe final = maioria
+
+#### 📌 Equação
+<img src="doc/img/equacao-knn.png">
+
+#### 💡 Intuição:
+👉 “diga-me quem são seus vizinhos que direi quem você é”
+
+### 📊 6. Naive Bayes
+É um algoritmo de classificação baseado no **Teorema de Bayes**, que assume que as variáveis são independentes **entre si** (“naive” = ingênuo).
+
+<img src="doc/img/teorema-de-bayes-1.png">
+
+#### 🧠 O que faz?
+Usa probabilidade para classificar assumindo independência entre variáveis.
+
+#### 🤔 Quando usar:
+Quando os dados são **probabilísticos (ex: texto)**
+
+#### 💼 Use cases:
+- 📧 Filtro de spam
+- 📰 Classificação de notícias
+- 💬 Análise de sentimento
+
+#### 👉 Por que usar?
+- Muito rápido
+- Funciona bem com texto
+- Poucos dados necessários
+
+#### ⚙️ Como funciona?
+1. Calcula probabilidade de cada classe
+1. Aplica Teorema de Bayes (Assume independência entre as variáveis)
+1. Escolhe maior probabilidade
+
+#### 📌 Equação
+<img src="doc/img/equacao-bayes.png">
+
+#### 💡 Intuição:
+👉 “qual classe é mais provável dado os dados?”
+
+### 🧠 7. Redes Neurais (MLP, CNN)
+São modelos inspirados no cérebro humano, formados por **neurônios artificiais** que processam informação em camadas.
+
+<img src="doc/img/rede-neural.png">
+
+👉 Usadas para aprender padrões complexos em dados (imagem, texto, áudio, etc.)
+
+#### 🧬 Neurônio Biológico
+<img src="doc/img/neuronio-biologico.png">
+
+#### 🔩 Neurônio Artificial
+<img src="doc/img/neuronio-artificial.png">
+
+#### 🔷 Conceitos fundamentais
+- **Neurônio artificial →** unidade básica de cálculo
+- **Peso (w) →** importância de cada entrada
+- **Bias (b) →** ajuste fino da saída
+- **Função de ativação →** decide se o neurônio “ativa”
+
+#### 🏗️ Arquitetura
+Uma rede neural é organizada em camadas:
+
+#### 📌 1. Camada de Entrada
+- Recebe os dados (features)
+
+#### 📌 2. Camadas Ocultas (Hidden Layers)
+- Onde ocorre o aprendizado
+- Podem ter várias camadas (Deep Learning)
+
+#### 📌 3. Camada de Saída
+- Retorna a previsão
+- número (regressão)
+- classe (classificação)
+
+#### 🔧 Componentes principais
+#### 🔷 1. Pesos (w)
+Controlam a influência de cada entrada
+
+#### 🔷 2. Bias (b)
+Permite ajustar a saída independentemente das entradas
+
+#### 🔷 3. Função de ativação
+
+#### Exemplos:
+- Sigmoid
+- ReLU
+- Tanh
+- Softmax
+
+👉 Introduz **não linearidade**
+
+#### 🔷 4. Função de perda (Loss)
+Mede o erro do modelo
+
+#### Ex:
+- MSE (regressão)
+- Cross-entropy (classificação)
+
+#### 🔷 5. Otimizador
+Ajusta os pesos para reduzir erro
+
+#### Ex:
+- Gradient Descent
+- Adam
+
+#### ✴️ O que faz?
+Aprende padrões complexos usando camadas de neurônios artificiais.
+
+#### 🤔 Quando usar:
+Quando há **grande volume de dados e padrões complexos**
+
+#### 💼 Use cases:
+- 🖼️ Visão computacional (CNN)
+- 🗣️ Reconhecimento de voz
+- 🤖 NLP (texto)
+
+#### 👉 Por que usar?
+- Alta performance
+- Captura relações complexas
+- Flexível
+
+#### ⚙️ Como funciona (passo a passo)
+#### 1️⃣ Forward Pass
+- Dados entram
+- Passam pelas camadas
+- Geram uma previsão
+
+#### 2️⃣ Cálculo do erro
+- Compara previsão vs valor real
+
+#### 3️⃣ Backpropagation
+- Calcula como cada peso contribuiu para o erro
+
+#### 4️⃣ Atualização dos pesos
+- Ajusta pesos usando gradiente
+
+#### 📌 Equação
+<img src="doc/img/equacao-redes-neurais.png">
+
+#### 🛑 Tipos de Redes Neurais
+
+#### 🔷 Perceptron
+- Redes simples com uma camada de entrada e uma camada de saída
+
+<img src="doc/img/perceptron.png">
+
+#### 🔷 MLP (Perceptron Multicamadas)
+- Dados tabulares, introdução do backpropagation
+
+<img src="doc/img/mlp.png">
+
+#### 🔷 CNN (Convolutional Neural Network)
+- Imagens
+
+<img src="doc/img/cnn.png">
+
+#### 🔷 RNN (Recurrent Neural Network)
+- Sequências (texto, séries temporais)
+
+<img src="doc/img/rnn.png">
+
+#### 🔷 Transformers
+- NLP moderno (ex: ChatGPT)
+
+<img src="doc/img/transformers.png">
+
+#### 💡 Intuição:
+```bash
+Entrada → combina sinais → ativa neurônios → passa para próxima camada → saída
+```
+👉 “aprende padrões como o cérebro, em camadas”
 
 ### 🧠 Clusterização
 
@@ -132,31 +695,12 @@ Um agente aprende interagindo com o ambiente.
 - One-Class SVM
 - LOF (Local Outlier Factor)
 
-### 🎯 Sistemas de Recomendação
-
-#### Sugerir itens:
-- Filtragem colaborativa
-- Filtragem baseada em conteúdo
-- Matrix Factorization
-
-#### 📌 Exemplo:
-Netflix, Amazon, Spotify
-
-### 🧬 Algoritmos Bio-inspirados
-
-#### Inspirados na natureza:
-- Algoritmos Genéticos
-- Particle Swarm Optimization
-- Ant Colony Optimization
-
 ### 🔽 Redução de Dimensionalidade
 
 #### Simplificar dados:
 - PCA
 - t-SNE
 - UMAP
-
-
 
 ## 🚀 Pipeline típico de Machine Learning
 1. Coleta de dados
@@ -1120,19 +1664,38 @@ A **regressão** é uma técnica estatística usada para **modelar a relação e
 
 ### 🔷 Ideia básica
 
+#### 🔹 Variável Independente (X)
+
+É a variável que **você controla ou usa como entrada.**
+
+👉 Ela “explica” ou influencia outra variável
+
+#### 🔹 Variável Dependente (Y)
+
+É a variável que **você quer prever ou explicar.**
+
+👉 Ela depende da variável independente
+
 #### Você tem:
 
-- **Variável independente (X) →** entrada
-- **Variável dependente (Y) →** saída
+- **Variável independente (X) →** entrada ou explicativa
+- **Variável dependente (Y) →** saída ou resposta
 
 👉 A regressão tenta encontrar uma função que ligue X → Y
 
-#### 📌 Exemplo
-- X: tamanho da casa
-- Y: preço
+### 📌 Exemplo
+####  🏠 Preço de casa
+- **X (independente) →** tamanho da casa
+- **Y (dependente) →** preço
 
 #### 👉 A regressão aprende:
 quanto o preço muda conforme o tamanho
+
+#### 📚 Estudo vs nota
+- **X →** horas de estudo
+- **Y →** nota
+
+#### 👉 Quanto mais estudo, maior a nota (em geral)
 
 ### 🔷 Tipos de Regressão
 
@@ -1254,6 +1817,19 @@ Fold 5 → teste | resto treino
 - **Poucos dados →** validação cruzada
 - **Muitos dados →** hold-out já pode ser suficiente
 
+### 🔷 Análise de Residual
+É o estudo dos **erros do modelo**.
+
+#### 👉 Responde:
+“Onde e como o modelo está errando?”
+
+### 📌 Equação
+O **R² (coeficiente de determinação)** é uma das métricas mais importantes em regressão.
+
+<img src="doc/img/equacao-analise-residual.png">
+
+<img src="doc/img/equacao-analise-residual-2.png">
+
 ### 📊 Métricas de Avaliação de Performance de Modelos
 
 São medidas usadas para verificar o quão bom é o desempenho de um modelo.
@@ -1322,8 +1898,6 @@ Média harmônica entre Precisão e Recall
 - Penaliza previsões erradas com alta confiança
 
 
-
-
 ### 🚀 Estatística no Machine Learning
 | Etapa ML          | Estatística envolvida  | Técnicas estatísticas utilizadas                                |
 | ----------------- | ---------------------- | --------------------------------------------------------------- |
@@ -1337,3 +1911,7 @@ Média harmônica entre Precisão e Recall
 
 
 
+#### Fontes
+- https://elisaterumi.substack.com/p/top-8-algoritmos-de-machine-learning
+- https://www.datacamp.com/pt/blog/top-machine-learning-use-cases-and-algorithms
+- https://www.elastic.co/pt/blog/popular-ml-algorithms
