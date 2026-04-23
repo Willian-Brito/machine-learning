@@ -1,5 +1,5 @@
 # 🧠 Machine Learning
-**Machine Learning (ML)** é uma área da **Inteligência Artificial** que permite que sistemas aprendam padrões a partir de dados e tomem decisões ou façam previsões sem serem explicitamente programados para cada regra. Em vez de regras fixas, você fornece dados + objetivo → o modelo aprende a “função”.
+**Machine Learning (ML)** é uma área da **Inteligência Artificial** que permite que sistemas aprendam padrões a partir de dados e tomem decisões ou façam previsões sem serem explicitamente programados para cada regra.
 
 ## 📚 Abordagens
 <img src="doc/img/aprendizados-2.png">
@@ -37,8 +37,9 @@ Você tem dados sem rótulos.
 
 #### Tipos principais:
 - **Clusterização →** agrupar dados similares
-- **Detecção de Anomalias →** encontrar comportamentos fora do padrão
 - **Redução de Dimensionalidade →** simplificar dados
+- **Detecção de Anomalias →** encontrar comportamentos fora do padrão
+- **Sistemas de Recomendação** (em parte)
 
 #### Algoritmos comuns:
 - K-Means
@@ -172,7 +173,7 @@ Y = α (alfa) + β (beta) * X (variável independente)
 1. Ponto de **interceptação** da linha de regressão quando o X for 0
 1. Calcula o **valor predito**
 
-#### 💡 Intuição:
+#### 💡 Ideia Principal:
 👉 “Qual a melhor linha que passa pelos pontos?”
 
 ### 🧊 2. Ridge e Lasso (Regularização)
@@ -210,7 +211,7 @@ Quando há **muitas variáveis** ou risco de overfitting
 - Pode zerar coeficientes \
 👉 Faz seleção de variáveis
 
-#### 💡 Intuição:
+#### 💡 Ideia Principal:
 | Modelo | Comportamento          |
 | ------ | ---------------------- |
 | Ridge  | “encolhe” coeficientes |
@@ -252,7 +253,7 @@ senão → grupo B
 ####  📌 Critério
 Minimiza erro dentro dos grupos (variância)
 
-#### 💡 Intuição:
+#### 💡 Ideia Principal:
 👉 “quebra os dados em pedaços mais homogêneos”
 
 ### 🌲 4. Random Forest Regressor
@@ -282,7 +283,7 @@ Quando precisa de mais precisão e robustez
 #### 📌 Equação
 <img src="doc/img/equacao-random-forest.png">
 
-#### 💡 Intuição:
+#### 💡 Ideia Principal:
 👉 “muitas opiniões → resposta mais estável”
 
 ### 🚀 5. Gradient Boosting
@@ -313,7 +314,7 @@ Quando precisa de alta performance e precisão
 #### 📌 Equação
 <img src="doc/img/equacao-gradient-boosting.png">
 
-#### 💡 Intuição:
+#### 💡 Ideia Principal:
 👉 “cada modelo aprende com os erros do anterior”
 
 ### ⚖️ Comparação geral
@@ -374,7 +375,7 @@ Quando o problema é linear e interpretável
 #### 📌 Equação
 <img src="doc/img/equacao-regressao-logistica.png">
 
-#### 💡 Intuição:
+#### 💡 Ideia Principal:
 👉 “transforma uma reta (soma linear) em probabilidade”
 
 ### 🌳 2. Decision Tree Classifier
@@ -407,7 +408,7 @@ Quando precisa de um modelo interpretável e baseado em regras
 #### 📌 Equação
 <img src="doc/img/equacao-arvore-de-decisao-2.png">
 
-#### 💡 Intuição:
+#### 💡 Ideia Principal:
 👉 “divide os dados até cada grupo ficar o mais puro possível”
 
 ### 🌲 3. Random Forest Classifier
@@ -439,7 +440,7 @@ Quando precisa de mais precisão e reduzir overfitting
 #### 📌 Equação
 <img src="doc/img/equacao-random-forest-2.png">
 
-#### 💡 Intuição:
+#### 💡 Ideia Principal:
 👉 “várias árvores votam e vence a maioria”
 
 ### 📏 4. SVM (Support Vector Machine)
@@ -480,7 +481,7 @@ Um **Kernel**,  em aprendizagem de máquina, é um modelo matemático que permit
 #### 📌 Equação
 <img src="doc/img/equacao-svm.png">
 
-#### 💡 Intuição:
+#### 💡 Ideia Principal:
 👉 “separa as classes com a maior margem possível”
 
 ### 👥 5. KNN (K-Nearest Neighbors)
@@ -514,7 +515,7 @@ Quando os dados têm padrões locais
 #### 📌 Equação
 <img src="doc/img/equacao-knn.png">
 
-#### 💡 Intuição:
+#### 💡 Ideia Principal:
 👉 “diga-me quem são seus vizinhos que direi quem você é”
 
 ### 📊 6. Naive Bayes
@@ -546,7 +547,7 @@ Quando os dados são **probabilísticos (ex: texto)**
 #### 📌 Equação
 <img src="doc/img/equacao-bayes.png">
 
-#### 💡 Intuição:
+#### 💡 Ideia Principal:
 👉 “qual classe é mais provável dado os dados?”
 
 ### 🧠 7. Redes Neurais (MLP, CNN)
@@ -561,6 +562,9 @@ São modelos inspirados no cérebro humano, formados por **neurônios artificiai
 
 #### 🔩 Neurônio Artificial
 <img src="doc/img/neuronio-artificial.png">
+
+#### ⚛️ Rede Neural Simples VS. Deep Learning
+<img src="doc/img/rede-neural-simples-vs-deep-learning.png">
 
 #### 🔷 Conceitos fundamentais
 - **Neurônio artificial →** unidade básica de cálculo
@@ -675,32 +679,713 @@ Quando há **grande volume de dados e padrões complexos**
 
 <img src="doc/img/transformers.png">
 
-#### 💡 Intuição:
+#### 💡 Ideia Principal:
 ```bash
 Entrada → combina sinais → ativa neurônios → passa para próxima camada → saída
 ```
 👉 “aprende padrões como o cérebro, em camadas”
 
 ### 🧠 Clusterização
+É o processo de **agrupar dados semelhantes entre si**, sem precisar de rótulos.
+
+#### 👉 Objetivo:
+colocar itens parecidos no mesmo grupo (cluster)
 
 #### Agrupar dados:
-- K-Means
-- DBSCAN
-- Hierárquico
+1. K-Means
+1. Hierárquico
+1. Spectral
+1. DBSCAN
 
-### 🚨 Detecção de Anomalias
+### 🔴 Tipos de agrupamentos
+- **Hierarquicos:** Criam uma decomposição dos dados, podendo ser aglomerados ou divisórios.
+    - **Aglomerativos:** Começam atribuindo um elemento a cada grupo, e sucessivamente se unem a grupos mais próximos até o momento de parada (ponto de corte).
+    - **Divisivo:** Começam com todos os elementos fazendo parte de um único grupo, e vão particionando até o momento de parada.
+- **Particionais:** A partir dos dados apresentados, serão contruídas "K" partições, sendo que cada partição K, sendo K <= n, interagindo com umm algoritmo de realocação iterativa.
 
-#### Identificar outliers:
-- Isolation Forest
-- One-Class SVM
-- LOF (Local Outlier Factor)
+### 🖼️ Representação dos grupos
+- **Protótipos:** Corresponde a um ponto (geralemente a media dos valores) de um grupo. Mas pode ser também um ponto existente qualquer dentro do grupo.
+- **Hierarquico:** è um caso particular de grafos que representam hierarquias entre os elementos e os grupos.
+- **Grafos:** São grupos que possuem  Nós (pontos) e Arestas (ligações) entre si no grupo. Qualquer elemento que esteja interligando, pode representar parte do grupo.
+
+<img src="doc/img/representacao-de-grupos.png">
+
+### 👥 1. K-Means
+Algoritmo que agrupa os dados em **K clusters** com base na proximidade dos pontos ao centro (centroide).
+
+<img src="doc/img/k-means.png">
+
+#### 🧠 O que faz?
+Divide os dados em K grupos minimizando a distância até o centro do cluster.
+
+#### 🤔 Quando usar:
+Quando os dados formam **grupos bem definidos e esféricos**
+
+#### 💼 Use cases:
+- 🧑‍🤝‍🧑 **Clientes →** segmentação de perfis
+- 🛒 **Marketing →** agrupamento por comportamento
+- 🖼️ **Imagem →** compressão
+
+#### 👉 Por que usar?
+- Simples e rápido
+- Escalável
+- Fácil de interpretar
+
+#### ⚙️ Como funciona?
+1. Define o número de clusters (K)
+1. Inicializa centroides
+1. Associa cada ponto ao centro mais próximo
+1. Atualiza os centroides
+1. Repete até convergir
+
+#### 📌 Equação
+<img src="doc/img/equacao-k-means.png">
+
+#### 💡 Ideia Principal:
+👉 “cada ponto vai para o centro mais próximo”
+
+
+### 🖧 2. Hierárquico
+O **clustering hierárquico** é uma família de algoritmos de agrupamento que constrói uma hierarquia de clusters, também conhecida como **árvore de clusters (dendograma)**.
+
+Uma característica distintiva e vantajosa desses métodos é que eles **não exigem a pré-especificação do número de clusters**, como é o caso do k-means.
+
+<img src="doc/img/agrupamento-hierarquico.png">
+
+#### 🌳 Dendograma
+- No **eixo horizontal (folhas da árvore)**, são representados os pontos de dados individuais.
+- O eixo vertical representa a distância ou dissimilaridade na qual os clusters foram **fundidos (aglomerativos)** ou **divididos (divisivo).**
+- **Linhas horizontais** no dendograma conectam os clusters que foram **mesclados**, e a altura da linha indica a **distância inter-cluster** no momento da fusão.
+- Para obter um número **especifico de clusters**, pode-se **"cortar"** o dendograma com uma linha horizontal.
+
+#### 🔗 Métodos de Linkage
+**Linkage (ligação)** nada mais é que **como a distância entre dois clusters é calculada**.
+
+#### Existem quatro métodos clássicos:
+- **Single Linkage (vizinho mais próximo):** Define a distância entre dois clusters como a distância entre os dois pontos mais próximos de cada um. Tende a criar clusters alongados, sendo sensível a outliers e ruído. Bom para detectar formas não-convexas.
+- **Complete Linkage (vizinho mais distante):** Usa a distância entre os dois pontos mais distantes de cada cluster. Produz clusters mais compactos e de tamanho equilibrado, mas é sensível a outliers no sentido oposto, um ponto extremo pode impedir fusões naturais.
+- **Average Linkage (UPGMA):** Calcula a média de todas as distâncias par-a-par entre pontos dos dois clusters. É um meio-termo: menos sensível a extremos, tende a produzir clusters razoavelmente compactos e equilibrados.
+- **Ward's Method:** Em vez de distâncias, minimiza o aumento na variância interna (soma dos quadrados) ao fundir dois clusters. Tende a gerar clusters esféricos, de tamanho similar e bem separados. É o mais usado na prática, mas assume clusters convexos.
+
+#### Métodos:
+<img src="doc/img/metodos-de-ligacao-2.png">
+
+#### Gráficos:
+<img src="doc/img/metodos-de-ligacao.png">
+
+#### 🧠 O que faz?
+Agrupa dados formando uma **hierarquia de clusters**
+
+#### 🤔 Quando usar:
+Quando você quer entender a **estrutura dos dados em níveis**
+
+#### 💼 Use cases:
+- 🧬 **Biologia →** classificação genética
+- 🧑‍🤝‍🧑 **Clientes →** segmentação em níveis
+- 📊 **Análise exploratória**
+
+#### 👉 Por que usar?
+- Não precisa definir K inicialmente
+- Fácil de visualizar
+- Mostra relações entre grupos
+
+#### ⚙️ Como funciona?
+1. Começa com cada ponto como um cluster
+1. Junta os mais próximos
+1. Repete até formar um único cluster
+1. Pode cortar a árvore no nível desejado
+
+#### 📌 Equação
+<img src="doc/img/equacao-hierarquico.png">
+
+#### 💡 Ideia Principal:
+👉 “vai juntando os pontos mais próximos em níveis”
+
+### 🌐 3. Spectral Clustering
+Usa **teoria de grafos** para encontrar clusters complexos.
+
+<img src="doc/img/spectral.png">
+
+#### 𝄜 Matriz de Afinidade
+A **matriz de afinidade** (ou matriz de similaridade) representa o quanto **dois pontos são parecidos entre si**.
+
+👉 Em vez de distância, ela mede **proximidade/similaridade**
+
+A primeira etapa crucial no Spectral Clustering é a construção de um grafo de **similaridade G = (V,E)**, onde:
+- **V** é o conjunto de pontos de dados **(vértices)**
+- **E** é o conjunto de **arestas**
+
+O **peso** de uma aresta entre os nós representa a **similaridade** entre os pontos de dados (vértices)
+
+#### </> Algoritmos
+Existem 3 algoritmos principais para **construir a matriz de afinidade (W)** no Spectral Clustering. Eles definem **quem se conecta com quem e com qual intensidade**. Antes do Spectral funcionar, você precisa de uma **matriz (W)**:
+- **ε-neighborhood:** 
+    - Conecta pontos que estão dentro de um raio ε (epsilon). 
+    - Cria conexões apenas entre pontos próximos dentro de uma distância limite.
+- **KNN (K-Nearest Neighbors Graph):** 
+    - Conecta cada ponto aos K vizinhos mais próximos. 
+    - Garante que cada ponto tenha um número fixo de conexões.
+- **Fully Connected:** 
+    - Todos os pontos são conectados entre si. 
+    - Cria um grafo completo (tudo conectado).
+    - Usa uma **função de similaridade**, geralmente com **RBF - Radial Basis Function**
+
+<img src="doc/img/spectral-algoritmos.png">
+
+#### 🧠 O que faz?
+Agrupa dados usando **relações de conectividade (grafo)**
+
+#### 🤔 Quando usar:
+Quando os clusters têm **formas complexas (não esféricas)**
+
+#### 💼 Use cases:
+- 🖼️ Visão computacional
+- 🌐 Redes sociais
+- 📊 Dados com estrutura complexa
+
+#### 👉 Por que usar?
+- Captura estruturas não lineares
+- Funciona melhor que K-Means em dados complexos
+
+#### ⚙️ Como funciona?
+1. Constrói um grafo de similaridade
+1. Calcula matriz Laplaciana
+1. Reduz dimensionalidade
+1. Aplica clustering (ex: K-Means)
+
+#### 📌 Equação
+<img src="doc/img/equacao-spectral.png">
+
+#### 💡 Ideia Principal:
+👉 “agrupa pontos que estão conectados, não apenas próximos”
+
+### 🚨 4. DB-SCAN
+O **DB-SCAN (Density-Based Spatial Clustering of Applications with Noise)** é um algoritmo de agrupamento proeminente que se baseia na **noção de densidade** dos dados para formar clusters.
+
+Ele agrupa pontos que estão **densamente compactados em uma região do espaço** de features, separados por regiões de menor densidade de pontos.
+
+Pontos em regiões **afastadas** são considerados como **ruído (outliers)**.
+
+<img src="doc/img/db-scan.png">
+
+#### ⚙︎ Parâmetros
+A Performance do DB-Scan é altamente dependente da escolha adequada de dois parâmetros principais:
+- **min_samples (MinPts):** è o **número mínimo de pontos** de dados que devem existir dentro da vizinhança **eps** de um ponto para que esse ponto seja classificado como um **core point**.
+- **eps (epsilon):** é um **valor de distância que define o raio** da vizinhança em torno de um ponto de dados. Dois pontos são considerados **vizinhos** se a distância entre eles for **menor ou igual a eps**.
+
+#### 🗃️ Classificação de Categorias de Pontos
+O DB-Scan classifica cada ponto de dados em uma das 3 categorias seguintes, com base em 2 parâmetros principais: **eps** e **min_samples**.
+- **Core Point (Ponto Central ou Ponto Núcleo):** Um ponto é considerado um core point se houver pelo menos **min_samples** outros pontos (incluindo ele mesmo) dentro de uma distância **eps** dele. Estes são os pontos que estão no interior de um cluster.
+- **Border Point (Ponto de Fronteira):** Um ponto é um border point se ele não é um core point (ou seja, tem menos de min_samples pontos sem sua vizinhança **eps**), m,as está dentro da vizinhança **eps** de pelo menos um core point. Pontos de fronteira estão nas bordas dos clusters.
+- **Noise Point (Ponto de ruído ou outlier):** Um ponto é um noise point se **não** é nem um **core point** nem um **border point**. Estes são os pontos que não pertencem a nenhum cluster denso.
+
+#### 🧠 O que faz?
+Agrupa pontos com base na **densidade de vizinhos**
+
+#### 🤔 Quando usar:
+Quando há **ruído ou clusters de formatos variados**
+
+#### 💼 Use cases:
+- 🚨 **Fraude →** detecção de anomalias
+- 🧑‍🤝‍🧑 **Clientes →** padrões incomuns
+- 🌍 **Geolocalização →** regiões densas
+
+#### 👉 Por que usar?
+- Detecta outliers automaticamente
+- Não precisa definir número de clusters
+- Funciona com formatos complexos
+
+#### ⚙️ Como funciona?
+1. Define raio (ε) e mínimo de pontos
+1. Identifica pontos densos
+1. Expande clusters a partir deles
+1. Marca pontos isolados como outliers
+
+#### 📌 Equação
+<img src="doc/img/equacao-dbscan.png">
+
+#### 💡 Ideia Principal:
+👉 “onde há muita densidade, há um cluster”
 
 ### 🔽 Redução de Dimensionalidade
+Em muitos problemas de machine learning, os dados podem ser de **alta dimensionalidade**, ou seja, podem possuir um **grande número de features**.
+
+Embora mais fetures possam, teoricamente, fornecer mais informação, datasets com **dimensionalidade excessiva apresentam vários desafios**.
+
+<img src="doc/img/reducao-de-dimensionalidade.png">
 
 #### Simplificar dados:
 - PCA
 - t-SNE
 - UMAP
+
+### ⛔ 4 Pricipais Problemas 
+
+#### 🛑 Maldição da Dimensionalidade
+- A medida que on número de **dimensões aumenta**, o volume do **espaço de features** cresce exponencialmente.
+- Isso leva à **esparsidade (afastamento)** dos dados, onde os pontos de dados tornam-se cada vez mais **distantes uns dos outros**, tornando as medidas de **distância** e **densidade** menos significativas.
+
+#### 🛑 Redundância e ruído
+- Em datasets de alta dimensão, é comum que muitas features sejam **correlacionadas (redundantes)** ou **irrelevantes (ruído)** para a tarefa de aprendizado.
+- Essas features podem **obscurecer** os padrões importantes e levar a modelos mais **complexos** e menos **generalizáveis**.
+
+#### 🛑 Eficiência Computacional e Armazenamento
+- Processar e amrmazenar datasets com um grande número de features consome mais **recursos computacionais** (tempo de processamento, memória, latência, etc).
+- A redução de dimensionalidade pode levar a modelos mais **rápidos** e a menor necessidade de armazenamento.
+
+#### 🛑 Visualização de Dados
+- É **"impossível"** visualizar diretamente dados com mais de 3 dimensões.
+- A redução de dimensionalidade para 2 ou 3 dimensões permite a criação de visualizações que podem revelar a estrutura e os padrões nos dados.
+
+### ✅ Formas de Resolver
+
+<img src="doc/img/reducao-de-dimensionalidade-2.png">
+
+#### 🟢 Seleção de features:
+Consiste em **selecionar** um **subconjunto** das features originais que são consideradas mais relevantes para o problema, **descartando as demais**.
+
+#### 🟢 Extração de features:
+Consiste em **transformar** as features originais em um **novo conjunto de features** de menor dimensionalidade. As novas features são combinações das features originais.
+
+### 📉 1. PCA (Principal Component Analysis)
+O PCA transforma os dados em um novo espaço reduzido, preservando a maior variância possível.
+
+Seu objetivo é transformar um conjunto de variáveis originais, que podem ser correlacionadas entre si, em um novo conjunto de variáveis linearmente não correlacionadas, chamadas Componentes Principais (CPs), os componentes com mais informações possui uma maior representação em relação aos dados originais.
+
+<img src="doc/img/pca-2.png">
+
+#### 🧠 O que faz?
+Reduz o número de variáveis criando **componentes principais**.
+
+#### 🤔 Quando usar:
+Quando quer **reduzir dimensionalidade mantendo informação global**
+
+#### 💼 Use cases:
+- 📊 **Pré-processamento →** reduzir features
+- 🖼️ **Imagem →** compressão
+- 🧠 **Análise exploratória**
+
+#### 👉 Por que usar?
+- Reduz ruído
+- Acelera modelos
+- Remove redundância
+
+#### ⚙️ Como funciona?
+1. Centraliza os dados
+1. Calcula matriz de covariância
+1. Extrai autovalores/autovetores
+1. Projeta dados nos principais componentes
+
+#### 📌 Equação
+<img src="doc/img/equacao-pca.png">
+
+#### 💡 Ideia Principal:
+👉 “projeta os dados nas direções de maior variância”
+
+### 🌐 2. t-SNE (t-distributed Stochastic Neighbor Embedding)
+O t-SNE reduz dimensionalidade preservando relações locais entre pontos (melhor para dados não linearesao contrário do PCA).
+
+<img src="doc/img/t-SNE-2.png">
+
+#### 🧠 O que faz?
+Mantém **pontos próximos** próximos no novo espaço.
+
+#### 🤔 Quando usar:
+Quando quer **visualizar dados em 2D/3D**
+
+#### 💼 Use cases:
+- 📊 Visualização de clusters
+- 🧬 Dados complexos
+- 🧠 Exploração de dados
+
+#### 👉 Por que usar?
+- Excel1ente para visualização
+- Captura estruturas não lineares
+
+#### ⚙️ Como funciona?
+1. Calcula similaridade no espaço original
+1. Cria distribuição de probabilidade
+1. Mapeia para baixa dimensão
+1. Minimiza diferença entre distribuições
+
+#### 📌 Equação
+<img src="doc/img/equacao-t-SNE.png">
+
+#### 💡 Ideia Principal:
+👉 “mantém vizinhos próximos no mapa reduzido”
+
+### 🧭 3. UMAP (Uniform Manifold Approximation and Projection)
+UMAP é um método moderno que preserva estrutura local e global.
+
+<img src="doc/img/umap.gif">
+
+#### 🧠 O que faz?
+Projeta dados mantendo **estrutura do espaço original**
+
+#### 🤔 Quando usar:
+Quando quer performance + boa visualização
+
+#### 💼 Use cases:
+- 📊 Visualização de dados complexos
+- 🧬 Bioinformática
+- 🧠 Pré-processamento ML
+
+#### 👉 Por que usar?
+- Mais rápido que t-SNE
+- Preserva mais estrutura global
+- Escalável
+
+#### ⚙️ Como funciona?
+1. Constrói grafo de vizinhança
+1. Estima estrutura do espaço
+1. Projeta em menor dimensão
+1. Otimiza a representação
+
+#### 📌 Equação
+<img src="doc/img/equacao-umap.png">
+
+#### 💡 Ideia Principal:
+👉 “preserva a estrutura do espaço ao reduzir dimensão”
+
+### ⚖️ Comparação de Algoritmos
+| Algoritmo | Vantagens                                                                                                           | Desvantagens                                                                                     | Melhor uso                                           |
+| --------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ | ---------------------------------------------------- |
+| **PCA**   | ✅ Rápido e simples<br>✅ Escalável<br>✅ Mantém variância global<br>✅ Determinístico                                  | ❌ Só captura relações lineares<br>❌ Pode perder estruturas complexas                             | 📊 Pré-processamento<br>⚡ Redução rápida de features |
+| **t-SNE** | ✅ Excelente visualização<br>✅ Captura padrões não lineares<br>✅ Mantém vizinhos próximos                            | ❌ Muito lento<br>❌ Não preserva estrutura global<br>❌ Difícil de escalar<br>❌ Não determinístico | 🎨 Visualização 2D/3D<br>🧠 Exploração de dados      |
+| **UMAP**  | ✅ Mais rápido que t-SNE<br>✅ Preserva estrutura local e global<br>✅ Escalável<br>✅ Funciona bem em datasets grandes | ❌ Mais complexo de ajustar<br>❌ Sensível a hiperparâmetros                                       | 🚀 Visualização + produção<br>📊 Redução para ML     |
+
+
+### 🎯 Sistemas de Recomendação
+**Sistema de Recomendação** são ferramentas **indispensáveis** no cenário digital atual, agindo como sofisticados **filtros** de informação.
+
+Seu objetivo principal é **prever** a **"classificação"** ou **"preferência"** que o usuário consumiria deum determinado item, seja ele um produto, um filme, uma música ou qualquer conteúdo.
+
+<img src="doc/img/sistema-de-recomendacao.png" height="400">
+
+#### Sugerir itens:
+- Filtragem colaborativa
+- Filtragem baseada em conteúdo
+- MBA - Market Basket Analysis
+- Matrix Factorization
+
+### 📚 Abordagens
+#### 👥 Filtragem Colaborativa
+Esta técnica basea-se no princípio de que usuários com comportamentos ou preferêmnncias similares no **passado** tenderão a ter preferências similares no **futuro**
+
+- Baseia-se no comportamento de usuários para **recomendar itens similares**.
+- É analisado **interações** históricas entre **usuários e itens** para indentificar similaridades, seja entre **usuários (user-based)** ou entre **itens (item-based)**.
+- A ideia principal é que **usuários parecidos gostam de coisas parecidas**
+
+#### 🧾 Filtragem Baseada em Conteúdo
+Diferentemente da filtragem colaborativa, esta abordagem doca nos atributos dos próprios itens e no perfil de interesse do usuário.
+- Recomenda itens semelhantes ao que o usuário já consumiu.
+- Sugere itens com base nas **características dos itens**
+- A ideia principal é que **"se você gostou disso, vai gostar de algo parecido"**
+
+### 🛒 1. MBA (Market Basket Analysis)
+O **MBA** analisa itens que são comprados juntos.
+
+Pode revelar padrões de **co-ocorrência de produtos** que não são intuitivos ou óbvios, fornecendo a base para recomendações do tipo **"clientes que compraram o tem X também costumam comprar o intem Y"** ou **"itens frequentemente comprados juntos"**
+
+O core do MBA é desvendar **associações** ou **correlações** entre itens dentro de conjunto de dados **transacionais**.
+
+<img src="doc/img/mba-recomendacao.png">
+
+#### 📜 Conceitos
+- **Itens:** Referem-se aos produtos, serviços ou quaisquer entidades individuais que podem ser adquiridas ou consumidas. Por exemplo, em um supermercado, **itens** seriam **"pão"**, **"leite"**, **manteiga**, etc.
+- **Transações:** Uma transação representa um conjunto de um ou mais itens que foram **comprados juntos** por um cliente em uma **única ocasião** ou evento de compra. Cada transação é, portanto, uma **"cesta de compras"**
+- **Regras de associação:** São o principal resultado do MBA e expressam relações de **implicação entre conjuntos de itens**. Uma regra de associação é tipicamente escrita no formato **X -> Y**, que se lê como **"Se X, então Y"** ou **"X incide em Y"**.
+- **Suporte:** é o número de transações para as quais o MBA conseguirá fazer uma predição correta.
+- **Confiança:** É o número de transações que o MBA prediz corretamente, proporcional às transações que ele se aplica.
+
+#### 🧠 O que faz?
+Descobre **associações entre produtos**
+
+#### 🤔 Quando usar:
+Quando há dados de **transações (carrinho de compras)**
+
+#### 💭 Exemplo
+Para entender o funcionamento do **MBA (Market Basket Analysis)**, primeiro é importante compreender como os dados são estruturados.
+
+A base costuma ser representada por uma **matriz esparsa**, onde:
+
+- Cada linha representa uma transação (compra)
+- Cada coluna representa um produto
+- O valor 1 indica que o item foi comprado naquela transação
+- O valor 0 indica que o item não foi comprado
+
+👉 Em outras palavras, é uma grande tabela que registra, de forma binária, a presença ou ausência de produtos em cada compra.
+
+Essa estrutura facilita a identificação de padrões e associações entre itens, que é justamente o objetivo do MBA.
+
+#### 📍 Armazenamento convencional de transação:
+<img src="doc/img/mba-armazenamento-convencional.png" height="500">
+
+#### 📍 Armazenamento real da transação:
+<img src="doc/img/mba-transacao.png">
+
+#### 📍 Matriz esparsa:
+<img src="doc/img/mba-matriz-esparsa.png">
+
+#### 🎬 Cenário
+Neste nosso caso imagina que o item selecionado fosse o **leite**
+
+#### 🔷 Passo 1 — Calcular o suporte de Leite
+
+<img src="doc/img/mba-equacao-passo-1.png">
+
+#### 🔍 Leite aparece em:
+- TID 1 ✅
+- TID 3 ✅
+- TID 4 ✅
+
+👉 Total = 3 vezes
+
+
+#### 📊 Cálculo
+
+<img src="doc/img/mba-calculo.png">
+
+#### 🔷 Passo 2 — Escolher combinações com Leite
+
+Vamos analisar:
+
+- Leite → Pão
+- Leite → Manteiga
+- Leite → Café
+
+#### 🔷 Passo 3 — Suporte conjunto
+
+<img src="doc/img/mba-equacao-passo-3.png">
+
+#### 🔍 1. Leite + Pão
+
+Aparecem juntos em:
+
+- TID 1 ✅
+- TID 3 ✅
+- TID 4 ✅
+
+👉 Total = 3
+
+<img src="doc/img/mba-equacao-passo-3-leite-e-pao.png">
+
+#### 🔍 2. Leite + Manteiga
+- TID 1 ✅
+- TID 4 ✅
+
+👉 Total = 2
+
+<img src="doc/img/mba-equacao-passo-3-leite-e-manteiga.png">
+
+#### 🔍 3. Leite + Café
+- TID 1 ✅
+
+👉 Total = 1
+
+<img src="doc/img/mba-equacao-passo-3-leite-e-cafe.png">
+
+#### 🔷 Passo 4 — Calcular confiança
+
+<img src="doc/img/mba-equacao-passo-4.png">
+
+#### 🥖 Leite → Pão
+
+<img src="doc/img/mba-equacao-passo-4-leite-e-pao.png">
+
+👉 100% das pessoas que compram leite também compram pão
+
+#### 🧈 Leite → Manteiga
+
+<img src="doc/img/mba-equacao-passo-4-leite-e-manteiga.png">
+
+👉 67% compram manteiga junto
+
+#### ☕ Leite → Café
+
+<img src="doc/img/mba-equacao-passo-4-leite-e-cafe.png">
+
+👉 33% compram café junto
+
+#### 📊 Resultado final
+| Regra            | Suporte | Confiança |
+| ---------------- | ------- | --------- |
+| Leite → Pão      | 0.75    | 1.00      |
+| Leite → Manteiga | 0.50    | 0.67      |
+| Leite → Café     | 0.25    | 0.33      |
+
+#### 🧩 Resumo
+1. Calcula suporte
+2. Calcula suporte conjunto
+3. Calcula confiança
+4. Gera regras
+
+#### 💼 Use cases:
+- 🛒 **Supermercado →** produtos relacionados
+- 📦 **Cross-sell →** recomendações complementares
+- 💳 **Varejo →** combos de produtos
+
+#### 👉 Por que usar?
+- Identifica padrões de compra
+- Fácil de interpretar
+
+#### ⚙️ Como funciona?
+1. Analisa transações
+1. Identifica itens frequentes
+1. Gera regras de associação
+
+#### 📌 Equação
+<img src="doc/img/equacao-mba.png">
+
+#### 💡 Ideia Principal:
+👉 “quem compra A, tende a compra B”
+
+### 🔢 4. Matrix Factorization
+Decompõe a matriz usuário-item em fatores latentes.
+
+<img src="doc/img/matriz-factorization.png">
+
+#### 🧠 O que faz?
+Descobre **preferências ocultas (latentes)** entre usuários e itens
+
+#### 🤔 Quando usar:
+Quando há muitos dados e necessidade de personalização
+
+#### 💼 Use cases:
+- 🎬 **Netflix →** recomendação de filmes
+- 🛒 **Amazon →** produtos personalizados
+- 🎧 **Spotify →** músicas recomendadas
+
+#### 👉 Por que usar?
+- Alta performance
+- Captura padrões complexos
+- Escala bem
+
+#### ⚙️ Como funciona?
+1. Cria matriz usuário-item
+1. Decompõe em duas matrizes menores
+1. Reconstrói previsões
+
+#### 📌 Equação
+<img src="doc/img/equacao-matriz-factorization.png">
+
+#### 💡 Ideia Principal:
+👉 “descobre gostos ocultos e conecta usuários a itens”
+
+### 🚨 Detecção de Anomalias
+**Detecção de Anomalias**, também conhecido como **detecção de outliers** ou **valores discrepantes**, é o processo de identificar observações, eventos ou pontos de dados que se **desviam** significativamente do **comportamento padrão** ou esperado em conjunto de dados.
+
+Essas anomalias são, por natureza, **raras** e **distintas** da maioria dos dados. Sua importância reside no fato de que podem **sinalizar eventos críticos**, como falhas em sistemas, atividades fraudulentas, intrusões em redes de computadores, ou, por outro lado, podem representar **oportunidades de otimização**.
+
+<img src="doc/img/deteccao-de-anomalia.png">
+
+#### 🗃️ Categorias
+- **Anomalias pontuais:** Referem-se a uma **única** atividade de ocorrência com dados que são **anômalos** em relação a todo o restante do conjunto de dados.
+- **Anoimalias contextuais:** São instâncias de dados que são consideradas **anômalas** dentro de um **contexto específico**, mas que poderiam ser **normais em um contexto diferente**. Por exemplo, um gasto elevado em compras de **casacos de inverno** é normal durante o **inverno**, mas seria uma **anomalia contextual** se ocorresse no período do **verão**.
+- **Anomalias coletivas** Representam um conjunto de instâncias de dados relacionados que, como um grupo, são anômalas em relação a todo o conjunto de dados, embora as instâncias individuais dentro do grupos possam não ser anômalas por si sós.
+
+#### Identificar outliers:
+1. Isolation Forest
+1. One-Class SVM
+1. LOF (Local Outlier Factor)
+
+### 🌲 1. Isolation Forest
+Algoritmo baseado em árvores que isola pontos anômalos mais rapidamente que pontos normais.
+
+<img src="doc/img/isolation-forest.png">
+
+#### 🧠 O que faz?
+Identifica anomalias isolando dados por meio de divisões aleatórias.
+
+#### 🤔 Quando usar:
+Quando há **grandes volumes de dados** e necessidade de detectar outliers
+
+#### 💼 Use cases:
+- 💳 **Fraude →** transações suspeitas
+- 🏭 **Indústria →** falhas em máquinas
+- 🌐 **Segurança →** comportamento anômalo
+
+#### 👉 Por que usar?
+- Rápido e escalável
+- Funciona bem em alta dimensão
+- Não precisa de dados rotulados
+
+#### ⚙️ Como funciona?
+1. Cria várias árvores aleatórias
+1. Divide os dados recursivamente
+1. Mede quantos “cortes” são necessários para isolar um ponto
+1. Menos cortes → mais anômalo
+
+#### 📌 Equação
+<img src="doc/img/equacao-isolation-forest.png">
+
+#### 💡 Ideia Principal:
+👉 “pontos anômalos são mais fáceis de isolar”
+
+### 📏 2. One-Class SVM
+Modelo que aprende o padrão dos dados normais e identifica desvios.
+
+<img src="doc/img/one-class-svm.png">
+
+#### 🧠 O que faz?
+Cria uma fronteira que engloba os dados normais.
+
+#### 🤔 Quando usar:
+Quando você tem **apenas dados normais (sem anomalias rotuladas)**
+
+#### 💼 Use cases:
+- 🔐 **Segurança →** intrusão em sistemas
+- 💳 **Fraude →** comportamento fora do padrão
+- 🏥 **Saúde →** detecção de anomalias em exames
+
+#### 👉 Por que usar?
+- Não precisa de exemplos de anomalias
+- Funciona bem com dados complexos
+- Pode usar kernels
+
+#### ⚙️ Como funciona?
+1. Aprende a região onde os dados normais estão
+1. Define uma fronteira (hiperplano)
+1. Pontos fora da fronteira → anomalias
+
+#### 📌 Equação
+<img src="doc/img/equacao-one-class-svm.png">
+
+#### 💡 Ideia Principal:
+👉 “aprende o que é normal e rejeita o resto”
+
+### 📊 3. LOF (Local Outlier Factor)
+Algoritmo que detecta anomalias comparando densidade local.
+
+<img src="doc/img/lof.png">
+
+#### 🧠 O que faz?
+Identifica pontos que têm **densidade muito diferente dos vizinhos**
+
+#### 🤔 Quando usar:
+Quando os dados têm **densidade variável**
+
+#### 💼 Use cases:
+- 🧑‍🤝‍🧑 **Clientes →** comportamento incomum
+- 🌍 **Geolocalização →** pontos fora do padrão
+- 📊 **Análise exploratória**
+
+#### 👉 Por que usar?
+- Detecta anomalias locais
+- Não assume distribuição global
+- Funciona bem com clusters diferentes
+
+#### ⚙️ Como funciona?
+1. Calcula vizinhos mais próximos
+1. Mede densidade local
+1. Compara densidade com vizinhos
+1. Densidade menor → anomalia
+
+#### 📌 Equação
+<img src="doc/img/equacao-lof.png">
+
+#### 💡 Ideia Principal:
+👉 “se um ponto é muito menos denso que seus vizinhos, é anômalo”
 
 ## 🚀 Pipeline típico de Machine Learning
 1. Coleta de dados
@@ -1883,11 +2568,34 @@ Média harmônica entre Precisão e Recall
     - (2 * TP) / (2 * TP + FP + FN)
     - 2 * Precision * Recall / (Precision + Recall)
 
-
 #### 📌 Matriz de Confusão
 <img src="doc/img/matriz-de-confusao.png">
 
 <img src="doc/img/matriz-de-confusao-2.png">
+
+### 🔷 Clusterização
+
+#### 📌 Compactação (intragrupo):
+Objetos internos dos grupos devem estar o mais próximo possível dos outros que fazem parte daquele grupo.
+
+#### 📌 Separação (intergrupo):
+Os grupos devem estar o mais longe uns dos outros.
+
+#### 📌 Internas:
+Medidas que usam informações apenas do grupo, olhando para similariedade e cálculos intra e inter grupos.
+
+#### 📌 Externas:
+Avalia o quanto o grupo está repondendo ao que se espera encontrar (aqui é necessário conhecimento prévio do domínio de negócio especifico).
+
+#### 📌 Cluster de protótipo
+- A **inércia** avalia a que distância estão o spontos dentro de um cluster, ela nos dá a soma das distâncias gerando o valor **intracluster** (soma dos quadrados intra-cluster WCSS - Within-Cluster Sum of Squares)
+- Calcula a soma da distância de todos os pontos dentro de uim grupo, a partir do **centróide** desse grupo.
+- Calcula isso **individualmente para todos os grupos (clusters)** e o valor da inercia final é a soma de todas as distâncias.
+
+<img src="doc/img/avaliacao-prototipo.png">
+
+#### 📌 K-Means Cluster
+- Para avaliar o método, o ponto central de cada grupo **(centróide)** é utilizado. Este ponto é flutuante, e representa a distância media dos pontos existentes grupo **naquele momento.** A cada iteração, espera-se que este ponto se ajuste aos dados.
 
 ### 🔷 Outras métricas importantes
 
@@ -1896,7 +2604,6 @@ Média harmônica entre Precisão e Recall
 
 #### 📌 Log Loss
 - Penaliza previsões erradas com alta confiança
-
 
 ### 🚀 Estatística no Machine Learning
 | Etapa ML          | Estatística envolvida  | Técnicas estatísticas utilizadas                                |
