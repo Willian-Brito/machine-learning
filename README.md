@@ -1,3 +1,87 @@
+# 🤖 Inteligência Artificial
+
+A **Inteligência Artificial (IA)** é um campo da computação focado em criar sistemas capazes de executar tarefas que normalmente exigiriam inteligência humana — como aprender, raciocinar, reconhecer padrões e tomar decisões 🤖🧠
+
+Ela não é uma coisa única, mas sim um **ecossistema em camadas**, onde cada nível aprofunda a capacidade dos modelos.
+
+<img src="doc/img/camadas-da-ia.png">
+
+## 🧩 1. Inteligência Artificial (IA)
+
+### 🧠 O que é?
+Campo geral que engloba qualquer técnica que permita máquinas “simular” inteligência.
+
+### 🎯 Propósito:
+Automatizar tarefas cognitivas humanas
+
+### 📌 Exemplos:
+- Sistemas especialistas
+- Regras (if/else)
+- Busca e planejamento
+- Jogos (xadrez, Go)
+
+👉 Nem toda IA aprende, algumas seguem regras fixas
+
+## 📊 2. Machine Learning (ML)
+### 🧠 O que é?
+Subárea da IA onde sistemas **aprendem a partir de dados**
+
+### 🎯 Propósito:
+Encontrar padrões e fazer previsões
+
+### 📌 Exemplos:
+- Regressão
+- Classificação
+- Clustering
+- Sistemas de recomendação
+
+👉 Aqui o modelo melhora com experiência (dados)
+
+## 🧠 3. Deep Learning (DL)
+### 🧠 O que é?
+Subárea do ML baseada em **redes neurais profundas**
+
+### 🎯 Propósito:
+Resolver problemas complexos com alta capacidade de aprendizado
+
+### 📌 Exemplos:
+- Visão computacional (imagens)
+- Reconhecimento de voz
+- NLP (linguagem natural)
+
+👉 Usa muitas camadas → aprende representações complexas
+
+## ✨ 4. Generative AI (GenAI)
+### 🧠 O que é?
+Área focada em **gerar novos conteúdos**
+
+### 🎯 Propósito:
+Criar algo novo a partir do que foi aprendido
+
+### 📌 Exemplos:
+- Texto (chatbots)
+- Imagens (arte, design)
+- Código
+- Música
+
+👉 Não só analisa ela **cria novos conteúdos**
+
+## ⚖️ Comparação rápida
+| Camada | Foco          | O que faz                 |
+| ------ | ------------- | ------------------------- |
+| IA     | Geral         | Simula inteligência       |
+| ML     | Dados         | Aprende padrões           |
+| DL     | Redes neurais | Aprende padrões complexos |
+| GenAI  | Criação       | Gera conteúdo             |
+
+## 🧩 Resumo final
+- **IA** 1é o conceito mais amplo
+- **ML** traz aprendizado com dados
+- **DL** permite resolver problemas complexos
+- **GenAI** leva isso para criação de conteúdo
+
+---
+
 # 🧠 Machine Learning
 **Machine Learning (ML)** é uma área da **Inteligência Artificial** que permite que sistemas aprendam padrões a partir de dados e tomem decisões ou façam previsões sem serem explicitamente programados para cada regra.
 
@@ -1387,30 +1471,670 @@ Quando os dados têm **densidade variável**
 #### 💡 Ideia Principal:
 👉 “se um ponto é muito menos denso que seus vizinhos, é anômalo”
 
-## 🚀 Pipeline típico de Machine Learning
-1. Coleta de dados
-1. Limpeza e tratamento
-1. Feature engineering
-1. Treinamento do modelo
-1. Avaliação
-1. Deploy
-1. Monitoramento
+---
 
-## 📋 CRISP-DM
+# 🧠 Deep Learning
+É uma subárea de Machine Learning baseada em **redes neurais com múltiplas camadas**.
+
+<img src="doc/img/rede-neural-simples-vs-deep-learning.png">
+
+### 🎯 Propósito:
+
+Aprender **padrões complexos** automaticamente a partir de grandes volumes de dados.
+
+### 💼 Onde é usado:
+- 🖼️ Imagens
+- 🗣️ Áudio
+- 📝 Texto
+- 🎥 Vídeo
+
+👉 Quanto mais dados + camadas → mais capacidade de aprendizado
+
+## 🔁 1. RNN (Redes Neurais Recorrentes)
+As RNNs são usadas principalmente para **tarefas que envolvem dados sequenciais**, como séries temporais ou linguagem natural.
+
+Possuem **conexões recorrentes** que permitem a passagem de informação de um moimento no tempo para o próximo.
+
+A **ordem** das palavras em uma frase é crucial para o seu significado ao utilizar RNNs.
+
+<img src="doc/img/rnn.png">
+
+### 🧠 O que é?
+Rede neural projetada para dados sequenciais
+
+### 🎯 Propósito:
+Capturar dependência ao longo do tempo
+
+### ⚙️ Como funciona?
+- Cada saída depende da entrada atual + estado anterior
+- “memória” do que já foi visto
+
+### 💼 Use cases:
+- 📝 Processamento de texto
+- 📈 Séries temporais
+- 🗣️ Reconhecimento de fala
+
+### 📌 Equação
+<img src="doc/img/equacao-rnn.png">
+
+### ⚠️ Limitação:
+👉 Dificuldade com dependências longas (problema do gradiente)
+
+### 💡 Ideia Principal:
+👉 “lembra do passado para entender o presente”
+
+## 🖼️ 2. CNN (Redes Neurais Convolucionais)
+As CNNs são excelentes para tarefas de **visão computacional**, como **processamento de imagens**.
+
+Isso é feito através da aplicação de **filtros adequados** para processar a informação visual.
+
+São capazes de capturar efetivamente as dependências **espaciais e temporais** em uma imagem.
+
+<img src="doc/img/cnn.png">
+
+### 🧠 O que é?
+Rede neural especializada em **dados visuais**
+
+### 🎯 Propósito:
+Detectar padrões espaciais (bordas, formas, objetos)
+
+### ⚙️ Como funciona?
+1. Aplica filtros (convolução)
+1. Extrai características
+1. Reduz dimensão (pooling)
+1. Classifica
+
+### 💼 Use cases:
+- 🖼️ Classificação de imagens
+- 🚗 Carros autônomos
+- 🏥 Diagnóstico por imagem
+
+### 📌 Equação
+<img src="doc/img/equacao-cnn.png">
+
+### 💡 Ideia Principal:
+👉 “varre a imagem para encontrar padrões”
+
+## 🔄 3. Transformers
+
+<img src="doc/img/transformers.png">
+
+### ⌛ História
+Até 2017, o padrão-ouro para processar linguagem era as RNNs (Redes Neurais Recorrentes).
+
+- **Processamento sequencial:** Elas liam o texto palavra por palavra, numa fila. Para processar a palavra 5, elas precisavam ter processado as palavras 1,2,3 e 4.
+- **Implecação de engenharia:** Isto era impossível de paralelizar. Treinar era um processo terrivelmente lento.
+- **Memória curta:** Em frases longas, no momento em que a RNN chegava à palavra 50, ela já tinha **"esquecido"** o contexto da palavra 1.
+
+O Artigo de 2017 da Google **"Attention is All you Need"** resolveu este problema apresentando a Arquitetura dos Transformers eo Mecanismo de Atenção.
+
+O Transformer propôs uma arquitetura nova que resolveru ambos problemas:
+- **Paralelização total:** A arquitetura do ransformer processa todas as palavras (tokens) do prompt de uma só vez, em paralelo. Isso foi uma revolução para o treinamento em GPUs.
+- **Memória perfeita:** Ela resolveu o problema da memória curta com uma ideia... O Mecanismo de Atenção.
+- **Mecanismo de Atenção (Self-Attention):** Em vez de processar palavra por palavra, este mecanismo permite que cada palavra 'olhe' para **todas as outras palavras** na frase simultaneamente e **decida quais são as mais importantes** para **entender o seu próprio contexto** e sgnificado.
+- **Encoder:** É a parte do Transformer que lê e compreende profundamente toda a sequência de entrada de uma só vez, de forma bidirecional.
+- **Decoder:** É a parte do Transformer que gera a sequência de saída, um token de cada vez, olhando apenas para o que já foi escrito, sempre garantindo o contexto.
+
+#### 👉 “O encoder tem comportamento semelhante a modelos auto-encoding, enquanto o decoder segue um comportamento auto-regressivo.”
+
+### 🧠 O que é?
+Arquitetura baseada em **self-attention**
+
+### 🎯 Propósito:
+Entender relações entre palavras independentemente da posição
+
+### ⚙️ Como funciona?
+1. Converte texto em embeddings
+1. Aplica atenção (self-attention)
+1. Pesa a importância de cada palavra
+1. Gera representação contextual
+
+### 💼 Use cases:
+- 🤖 Chatbots
+- 📝 Tradução
+- 💬 NLP (texto)
+- 🧠 LLMs (ChatGPT, etc.)
+
+### 📌 Equação
+<img src="doc/img/equacao-transformers.png">
+
+### 💡 Ideia Principal:
+👉 “presta atenção no que é mais importante”
+
+---
+
+# 🤖 IA Generativa
+
+A **IA generativa**, às vezes chamada de GenIA, é a **inteligência artificial (IA)** que pode **criar conteúdo original**, como texto, imagens, vídeo, áudio ou código de software, em resposta a um prompt ou solicitação do usuário.
+
+A IA generativa depende de modelos sofisticados de **machine learning** chamados **modelos de deep learning**, que simulam os processos de aprendizado e tomada de decisão do cérebro humano.
+
+<img src="doc/img/aprendizado-gen-ai.png">
+
+Esses modelos funcionam identificando e codificando os padrões e relacionamentos em grandes quantidades de dados e, em seguida, usando essas informações para entender as solicitações ou perguntas de linguagem natural dos usuários e responder com novo conteúdo relevante.
+
+<img src="doc/img/gen-ai-processamento.png">
+
+## 📚 Conceitos
+
+### Ⓜ️ Modelos de Linguagem
+- **Large Language Models (LLM):** Modelos de IA treinados em grandes volumes de texto para criar conteúdo "original".
+- **Small Language Models (SLM):** Modelos de IA treinados com menos dados, mas focados em uma vertical.
+
+### 📝 Prompt Engineering:
+Prática de criar e refinar prompts para obter melhores resultados de um modelo de linguagem, impactando a eficácia do modelo.
+
+<img src="doc/img/engenharia-de-prompt.png">
+
+#### 📍 Marcadores de prompt (delimitadores)
+São **marcadores** ou símbolos que usamos para **estruturar** e organizar o nosso prompt. Eles criam **'caixas lógicas'** dentro da nossa entrada de texto.
+
+O objetivo é criar uma **separação clara e inequívocas** entre as diferentes partes do seu prompt.
+
+A regra de ouro é: **as suas instruções** devem estar sempre logicamente separadas da **entrada do usuário** ou do **contexto** que você recuperou.
+
+<img src="doc/img/engenharia-de-prompt-delimitadores.png">
+
+## 🏛️ Pilares
+São os fundamentos que sustentam uma IA generativa.
+
+- Tokens
+- Guardrails 
+- RAG 
+- Modelos Fundacionais 
+- Embeddings
+
+### 🔤 Tokens
+
+#### 🔷 Prompt
+O prompt é a entrada fornecida ao modelo para gerar conteúdo, iniciando a geração a partir desse ponto.
+
+<img src="doc/img/prompts.png">
+
+#### 🔷 Tokens
+São **unidades de texto** que o modelo entende. É geralmente, um pedaço de uma palavra.
+
+**Limites de Contexto (Context Window):** Todo modelo tem um "tamanho de memória" (que é a "Memória RAM" do modelo). Um modelo como o GPT4o tem um contexto de 128k. Isso não são 128.000 palavras. São 128.000 tokens. Isso define o tamanho máximo do seu prompt + a resposta gerada.
+
+**Custo:** Você não paga à OpenAI, Google ou Antropic por request ou por palavra. **Você paga por token**. E, para, ajudar você paga tanto pelos tokens que você envia (input) quanto pelos tokens que o modelo gera (output).
+
+<img src="doc/img/tokens.png">
+
+### 🛡️ Guardrails
+São **regras e controles** para limitar o comportamento da IA. As LLMs podem **alucinar**, é nosso papel **evitar** que isso aconteça com **guardrails** de entrada e saída.
+
+- **Ataques (Prompt Injection):** O usuário tentar enganar o seu assistente para ele ignorar regras.
+- **Saídas Inseguras/Tóxicas:** O modelo gerar discurso de ódio, conteúdo ofensivo, etc.
+- **Fugas de Tópico (Off-topic):** O seu bot de atendimento ao cliente começar a dar receitas de bolo.
+- **Vazamento de Dados:** O modelo vazar acidentalmente PII (Informações Pessoais Identificáveis) ou segredos da empresa que possa ter aprendido.
+
+#### 💻 System Prompt
+É um **guardrail de configuração**, fica transparente para o usuário.
+
+É uma instrução de alto nível que define a **persona**, as **regras invioláveis** e os **limites permanentes** do seu assistente de IA.
+
+É enviado para a API (no caso da OpenAI, no role system) antes da conversa do usuário começar.
+
+<img src="doc/img/system-prompt.png">
+
+#### 👤 Prompt Concatenado
+É um **conjunto de instruções** que nós, como desenvolvedores, **concatenamos ao prompt do usuário** antes de enviá-los ao LLM.
+
+É incluído no **próprio prompt do usuário (user role)**, geralmente depois da entrada do usuário, como um contexto adicional.
+
+Isto é usado para controlar o formato de **saída** e as **restrições** da tarefa imediata.
+
+<img src="doc/img/prompt-concatenado.png">
+
+#### 🔁 Pós processamento
+O guardrail de pós-processamento é uma **verificação**.
+
+É o código (Python, Javascript, C#, etc.) que nós escrevemos para **validar a resposta do LLM** antes de a mostrarmos ao usuário.
+
+É incluído no nosso próprio **backend**, depois que a API do LLM retorna uma resposta.
+
+- **Validação de Formato:** O LLM devia retornar um JSON?
+    - Validar se a saída realmente é no formato JSON
+
+- **Validação de Segurança (PII):** A resposta contém acidentalmente um CPF?
+    - Verifica se é um CPF com os cálculos ou regex
+
+- **Validação de Tópico:** A resposta é tóxica ou saiu do tópico?
+    - Podemos até usar um segundo LLM, menos e mais barato como um classificador para validar a resposta do LLM principal.
+
+#### 😵‍💫 Alucinação
+Uma **alucinação** ocorre quando o modelo gera uma saída que é **factualmente incorreta, completamente inventada** ou **sem sentido**, mas apresenta com total confiança e autoridade.
+
+Pensem na alucinação como uma **falha de integridade referencial** com a realidade. O modelo é um mestre em gerar texto que é **gramaticalmente perfeito** ao mesmo tempo que é **internamente consistente**, mas que pode não ter qualquer âncora no mundo real.
+
+👉 Evitam que a IA “saia do controle”
+
+### 🔎 RAG (Retrieval-Augmented Generation)
+O GPT-5 não sabe o que aconteceu ontem. O seu conhecimento está **'congelado'** no tempo, na data em que o seu **treino terminou (30 de setembro de 2024)**.
+
+O modelo não conhece os **seus dados** privados. Ele não pode responder a:
+- Qual é o estado do meu pedido numero 521:
+- Resuma o último relatório de vendas da nossa empresa.
+
+O **Vector Database** é usado para armazenamento e **recuperação de conhecimento** factual a "Memória de longo prazo".
+
+<img src="doc/img/rag.png">
+
+### 🧱 Modelos de Fundação
+Modelos que servem como uma **base ou "fundação"** que pode ser refinada (via fine-tuning, RAG ou prompt engineering) para uma ampla gama de tarefas especificas.
+
+- **Massivo:** Treinado em uma escala gigantesca, com centenas de bilhões ou até trilhões de parâmetros.
+- **Generalista:** Treinado em uma uqantidade vasta e diversificada de dados não rotulados, basicamente, uma porção enorme da internet, livros e códigos.
+
+#### 🏋️‍♂️ Treinamento
+É treinado de forma **auto-supervisionada** (por exemplo, 'prever a próxima palavra') sobre todos esses dados.
+
+Devido à sua escala massiva, propriedades emergentes aparecem: ele não apenas memoriza a linguagem, ele aprende sobre fatos do mundo, sobre como raciocinar, sobre estrutura de código, sobre física e até sobre lógica.
+
+**Mas mesmo assim, ele não sabe de nada!**
+
+#### 🔷 Modelos Tradicionais
+Para cada novo problema (ex: um classificador de spam), era necessário:
+- Coletar milhares de exemplos rotulados.
+- Treinar um modelo especialista do zero (from scratch).
+- Repetir todo o processo par ao pŕoximo problema (ex: um bot assistente).
+
+#### 🔷 Modelos Fundacionais
+Agora é diferente.
+
+- **Passo 1 (Pré treinamento):** Uma grande empresa (OpenAI, Google, Meta) gasta dezenas de milhões de dolares e meses de computação para treinar um Modelo Fundacional gigante.
+- **Passo 2 (Adaptação):** Nós desenvolvedores, pegamos esse **'motor'** pré-treinado e adaptamos rapidamente para a nossa tarefa especifica.
+
+<img src="doc/img/etapas para-criar-modelos-fundacionais.png">
+
+### 🔢 Embeddings
+
+É uma **representação numérica** (um vetor de números de ponto flutuante) de dados, como palavras,frases, imagens, ou documentos. Essas representações capturam o significado semântico e as relações entre os dados, permitindo que o modelo e Vector Database entendam quais informações são conceitualmente semelhantes.
+
+O objetivo é capturar o **significado semântico** do objeto. Objetos com significados semelhantes terão vetores (embeddings) próximos no espaço vetorial.
+
+<img src="doc/img/embeddings-relacoes.png">
+
+#### 📌 Exemplo
+Pensem em como representamos cores. 
+
+- Não dizemos ao computador **"um tom de vermelho vibrante"**. Nós passamos um vetor RGB, como **(255,0,0)**.
+- Um **"vermelho um pouco mais escuro"** seria **(200,0,0)**.
+- Mas **"azul"** seria **(0,0,255)**.
+
+Veja que os **vermelhos são vetores numericamente próximos**, mas o **azul é distante** nesse espaço de busca.
+
+<img src="doc/img/embeddings-cores.png">
+
+#### ⚙️ Como funciona?
+**Vetorização:** Embeddings fazem a mesma coisa do exemplo das cores, mas para conceitos.
+
+Em vez de 3 dimensões (R,G,B), podemos ter 300, 1024, ou até mais de 4000 dimensões que, juntas, capturam a **"essência"** ou o **"significado"** de algo.
+
+#### 📌 Exemplo
+O vetor de **"Rei"** menos o vetor de **"Homem"** mais o vetor de **"Mulher"** resulta em um vetor muito próximo ao de **"Rainha"**.
+
+<img src="doc/img/embeddings-exemplo-rainha.png">
+
+Pense em um **embedding** como uma **"API de significado"**. Você passa um dado complexo (texto) e recebe de volta um endereço (o vetor) em um "espaço de conceitos". Itens com endereços próximos são conceitualmente relacionados.
+
+**Aritmética vetorial:** Estamos literalmente fazendo matemática com conceitos (muito utilizado por GPUs). 
+
+Isso prova que o modelo não memorizou palavras, ele aprendeu as relações subjacentes entre elas.
+
+Ele aprendeu um **"vetor de realeza"** e um **"vetor de gênero"**.
+
+#### 💡 Ideia Principal:
+- **Texto parecido →** vetores próximos
+- **Texto diferente →** vetores distantes
+
+### ⛁ Vector Database
+É um banco de dados projetado para armazenar e buscar **vetores (embeddings)** em alta performance.
+
+👉 Em vez de buscar por texto exato, ele busca por **similaridade semântica**
+
+#### ⚙️ Como funciona?
+
+#### 1️⃣ Dados são transformados em embeddings
+- **"carro elétrico" →** [0.12, -0.45, 0.98, ...]
+
+#### 2️⃣ Vetores são armazenados
+- Cada item vira um vetor dentro do banco
+
+#### 3️⃣ Busca por similaridade
+Quando você faz uma consulta:
+- ela também vira vetor
+- o banco busca vetores mais próximos
+
+#### 📏 Métricas de similaridade
+🔹 Cosseno (mais comum)
+
+<img src="doc/img/embeddings-metricas-de-similaridade.png">
+
+👉 Mede o “ângulo” entre vetores
+
+🔹 Outras:
+- Distância Euclidiana
+- Produto escalar
+
+#### 🔢 Principais características
+- 🔍 Busca rápida (mesmo com milhões de vetores)
+- 📊 Indexação otimizada (ANN – Approximate Nearest Neighbors)
+- 🧠 Foco em similaridade, não igualdade
+- 📦 Suporte a metadados (ex: documento, data, categoria)
+
+#### 🔗 Onde é usado?
+
+#### 🔎 RAG (Retrieval-Augmented Generation)
+- busca contexto relevante
+- envia para o modelo
+
+#### 💬 Chatbots inteligentes
+- lembram contexto
+- consultam base de conhecimento
+
+#### 🛒 Recomendação
+- produtos similares
+
+#### 📄 Busca semântica
+- “intenção”, não palavra-chave
+
+#### 🧱 Exemplos de Vector Databases
+- Pinecone
+- Weaviate
+- Milvus
+- Qdrant
+- Chroma
+
+<img src="doc/img/ferramentas-de-vector-database.png">
+
+#### 🧩 Diferença para banco tradicional
+| Tipo        | Busca                       |
+| ----------- | --------------------------- |
+| SQL / NoSQL | igualdade (WHERE = )        |
+| Vector DB   | similaridade (parecido com) |
+
+#### 💡 Ideia principal
+- 👉 **Em vez de perguntar:** "traga exatamente isso"
+- 👉 **Você pergunta:** "traga algo parecido com isso"
+
+## 🏗️ Famílias de Modelos
+
+### 🔠 Modelos de Linguagem
+
+### 🔷 1. Arquitetura Auto-regressiva (GPT-style)
+Preveem a próxima palavra com base nas palavras anteriores. Ótimos para geração de texto fluente. São "decoders-only".
+
+<img src="doc/img/llm-auto-regressiva.png">
+
+#### 🤖 Modelos
+- GPT
+- LLaMA
+- Claude
+- Gemini
+
+#### 💡 Ideia Principal:
+👉 “**gera** texto palavra por palavra”
+
+### 🔷 2. Arquitetura Auto-encoding (BERT-style)
+Constroem uma compreensão profunda do texto "mascarando" palavras e tentando prevê-las com base no contexto de amvos os lados (esquerdo e direito). Ótimos para tarefas de compreensão, como classificação e extração de entidades. São "encoders-only"
+
+<img src="doc/img/llm-auto-encoding.png">
+
+#### 🤖 Modelos
+- BERT
+- RoBERTa
+- DistilBERT
+
+#### 💡 Ideia Principal:
+👉 “lê tudo de uma vez para **compreender**
+
+### 🌄 Modelos de Imagem
+
+### 🔷 1. GANs (Generative Adversarial Network)
+Compostos por duas redes neurais que competem entre si.
+- **Gerador:** Tenta criar imagens realistas a partir de um ruído aleatório.
+- **Discriminador:** Tenta distinguir entre imagens reais (do dataset de treino) e as imagens falsas criadas pelo gerador.
+- **Analogia:** UM falsificado de arte (Gerador) tentando enganar um detetive de arte (Discriminador). Com o tempo, o falsificador fica muito bom em criar obras convincentes.
+- **Desafio:** Treinamento instável.
+
+### 🔷 2. Diffusion Models
+Processo de "Denoising"
+- **Forward process:** Pega uma imagem real e gradualmente adiciona ruído gaussiano até que se torne puro ruído.
+- **Reverse process:** Treina uma rede neural para reverter esse processo, ou seja, para remover o ruído passo a passo, reconstruindo uma imagem limpa a partir do ruído.
+- **Geração:** Para gerar uma nova imafem, o modelo começa com um ruído aleatório e aplica o processo de "denoising" (guiado por um prompt de texto) para "esculpir" uma imagem coerente.
+
+
+## 🔗 Integrações
+O objetivo das integrações e conectar modelos de IA com **sistemas reais (APIs, bancos, apps)**.
+
+#### 🔧 Como acontece:
+- API (REST / GraphQL)
+- SDKs (Python, JS)
+- Webhooks
+- RAG (dados externos)
+
+#### 💡 Ideia:
+👉 “IA não vive sozinha — ela precisa conversar com sistemas”
+
+### 🔌 1. MCP (Model Context Protocol)
+Um protocolo que permite que modelos de IA **acessem ferramentas e dados externos de forma padronizada**. É como se fosse uma camada de **middleware** ou um **hub de conectores** padronizado.
+
+<img src="doc/img/mcp.png">
+
+👉 **Pense como:** "USB da IA"
+
+#### 🎯 Propósito:
+Padronizar integração entre:
+- IA
+- Ferramentas
+- Dados
+
+#### ⚙️ O que ele permite:
+- Acessar banco de dados (SQL, Vector DBs)
+- APIs Internas (CRM, ERP)
+- Serviços de Terceiros (Google Maps, Weather API)
+- Sistemas de memória (Redis)
+- Ler arquivos
+- Usar ferramentas externas
+
+### 🧩 Componentes
+
+#### 🔧 1. Tools (Ferramentas)
+
+São funções que o modelo pode chamar.
+
+#### Exemplo:
+```json
+{
+  "name": "buscar_cliente",
+  "description": "Busca dados do cliente pelo ID",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "cliente_id": { "type": "string" }
+    }
+  }
+}
+```
+👉 Isso é basicamente uma API descrita de forma padronizada
+
+#### 📚 2. Resources (Recursos)
+Dados que o modelo pode acessar diretamente:
+- arquivos
+- documentos
+- banco de dados
+- embeddings (via RAG)
+
+#### 🧠 3. Model (LLM)
+
+O modelo usa:
+- contexto
+- instruções
+- tools disponíveis
+
+👉 para decidir o que fazer
+
+#### 🔄 4. Runtime / Orquestrador
+
+É quem:
+- envia contexto para o modelo
+- executa tools
+- devolve resultado
+
+👉 Pode ser:
+- backend (Python/Node)
+- frameworks tipo LangChain
+
+### ⚙️ Fluxo completo (passo a passo)
+
+#### 🔁 Exemplo real
+#### Usuário:
+“Qual o saldo do cliente 123?”
+
+#### 1. Modelo recebe contexto
+
+Inclui:
+- pergunta do usuário
+- lista de tools disponíveis
+
+#### 2. Modelo decide usar tool
+Resposta do modelo (não visível pro usuário):
+```json
+{
+  "tool_call": "buscar_cliente",
+  "arguments": {
+    "cliente_id": "123"
+  }
+}
+```
+
+#### 3. Orquestrador executa
+- Backend chama: "GET /clientes/123"
+
+#### 4. Resultado volta
+```json
+{
+  "nome": "João",
+  "saldo": 1500
+}
+```
+
+#### 5. Modelo responde ao usuário
+> “O saldo do cliente João é R$ 1.500”
+
+#### 🚀 Exemplo de arquitetura
+```bash
+Frontend (chat)
+   ↓
+Backend (orquestrador)
+   ↓
+LLM (com contexto MCP)
+   ↓
+Tools (APIs, DB, serviços)
+```
+
+### 💼 Exemplos de tools reais
+- 📦 buscar pedido
+- 💳 consultar pagamento
+- 📊 gerar relatório
+- 📅 agendar reunião
+- 📁 ler PDF
+
+#### 💡 Ideia:
+👉 “dar superpoderes para o modelo interagir com o mundo”
+
+### 🤖 2. Agentes de IA
+Um agente de IA é um sistema que usa LLM par ainteragir de forma **autônoma** com um ambiente, usando **ferramentas** par aatingir um **objetivo** complexo de múltiplos passos.
+
+<img src="doc/img/etapas-do-agente.png" />
+
+#### 🧠 O que é?
+Um sistema autônomo que usa IA para:
+- tomar decisões
+- executar ações
+- atingir um objetivo
+
+#### 🎯 Propósito:
+Automatizar tarefas complexas
+
+<img src="doc/img/ferramentas-de-agentes.png" />
+
+#### ⚙️ Como funciona:
+1. Recebe objetivo
+2. Planeja ações
+3. Executa (via ferramentas/APIs)
+4. Avalia resultado
+5. Itera
+
+#### 💼 Use cases:
+- Assistente que agenda reuniões
+- IA que resolve tickets
+- Automação de processos
+
+#### 💡 Ideia:
+👉 “não só responde — age”
+
+### 🧠 3. Multi-Agentes
+**Multiagente** é uma coleção de múltiplos agentes que **colaboram** para resolver um problema complexo.
+
+A medida que a missão se torna **mais complexa** ("Lance uma campanha de marketing completa"), um único agente sofre de **sobrecarga**.
+
+<img src="doc/img/multi-agente.png" />
+
+#### Cada agente tem:
+- **Uma persona única:** "Você é um Engenheiro de Software Sênior".
+- **Um conjunto de ferramentas especializadas:** Acesso ao git, docker, ferramentes de teste, etc.
+- **Uma tarefa especifica:** "Revisar o código, econtrar bugs e abrir pull requests".
+
+#### ✨ IA Agêntica
+IA Agêntica não é um modelo ou uma ferramenta específica.
+
+É um **paradigma de design** de construir sistemas que são:
+- **Proativos e orientados a objetivos:** Perseguem missões, não apenas resposdem a perguntas.
+- **Autônomos:** Podem tomar decisões e corrigir cursos sem intervenção humana constante.
+- **Situados:** Estão 'cientes' do seu ambiente através de ferramentas e memória.
+- **Colaborativos:** Podem trabalhar com outros agentes.
+
+#### 🎯 Propósito:
+Resolver problemas complexos dividindo responsabilidades
+
+#### ⚙️ Como funciona:
+1. **Agente A →** pesquisa
+1. **Agente B →** analisa
+1. **Agente C →** executa
+
+#### 💼 Use cases:
+- Desenvolvimento de software assistido
+- Análise de dados complexa
+- Simulações
+
+#### 💡 Ideia:
+👉 “time de IAs colaborando”
+
+### 🧩 Resumo
+- **Integrações →** conectam sistemas
+- **MCP →** padrão de comunicação
+- **Agentes →** executam tarefas
+- **Multi-agentes →** colaboram
+
+---
+
+# 📋 CRISP-DM
 
 **CR**oss-**I**ndustry **S**tandart **P**rocess for **D**ata **M**ining é um framework de processo que define como conduzir um projeto de dados do início ao fim, focando não só no modelo, mas no valor para o negócio.
 
-#### 👉 A grande sacada:
+### 👉 A grande sacada:
 Machine Learning não começa no algoritmo — começa no problema de negócio
 
 <img src="doc/img/CRISP-DM.png" height="400">
 
 
-### 🔄 As 6 fases do CRISP-DM
+## 🔄 As 6 fases do CRISP-DM
 
 O modelo é cíclico (você volta fases sempre que necessário)
 
-### 📑 1. Entendimento do Negócio (Business Understanding)
+## 📑 1. Entendimento do Negócio (Business Understanding)
 
 Aqui você define o **problema real**
 
@@ -1426,7 +2150,7 @@ Aqui você define o **problema real**
 👉 **Saída:** problema traduzido para ML
 
 
-### 📊 2. Entendimento dos Dados (Data Understanding)
+## 📊 2. Entendimento dos Dados (Data Understanding)
 
 Exploração inicial dos dados
 - **Coleta de dados**
@@ -1444,7 +2168,7 @@ Exploração inicial dos dados
 
 👉 Aqui você começa a **“sentir”** os dados
 
-### 🧹 3. Preparação dos Dados (Data Preparation)
+## 🧹 3. Preparação dos Dados (Data Preparation)
 
 Geralmente a fase mais demorada 😅
 
@@ -1467,7 +2191,7 @@ Geralmente a fase mais demorada 😅
 
 👉 **Resultado:** dataset pronto para modelagem
 
-### 🤖 4. Modelagem (Modeling)
+## 🤖 4. Modelagem (Modeling)
 
 Aplicação dos algoritmos
 - **Técnicas de Modelagem**
@@ -1497,7 +2221,7 @@ Aplicação dos algoritmos
 - Random Forest
 - Redes neurais
 
-### 📈 5. Avaliação (Evaluation)
+## 📈 5. Avaliação (Evaluation)
 
 Verificar se o modelo resolve o problema de negócio
 - **Avaliação dos resultados**
@@ -1517,7 +2241,7 @@ Verificar se o modelo resolve o problema de negócio
 **👉 Aqui muita gente erra:**
 não basta “boa acurácia”, precisa gerar valor
 
-### 🚀 6. Deploy (Deployment)
+## 🚀 6. Deploy (Deployment)
 
 Colocar o modelo em produção
 - **Planejamento da implantação**
@@ -1553,6 +2277,14 @@ Colocar o modelo em produção
 
 #### 👉 Modelo útil = modelo em produção
 
+## 🚀 Pipeline típico de Machine Learning
+1. Coleta de dados
+1. Limpeza e tratamento
+1. Feature engineering
+1. Treinamento do modelo
+1. Avaliação
+1. Deploy
+1. Monitoramento
 
 ## 📚 Bilbiotecas em Python de Machine Learning
 | Categoria     | Biblioteca   | Para que serve                                                                  |
@@ -1570,6 +2302,7 @@ Colocar o modelo em produção
 | Boosting      | XGBoost      | Algoritmo de boosting eficiente e muito usado em competições                    |
 | Boosting      | LightGBM     | Boosting otimizado para grandes volumes de dados                                |
 
+---
 
 # 📉 Estatística
 Estatística é a ciência que utiliza-se das **teorias probabilísticas** para explicar a frequência de eventos, tanto em estudos observacionais quanto em experimentos para modelar a **aleatoriedade** e a **incerteza** de forma a estimar ou possibilitar a previsão de fenômenos futuros, conforme o caso.
@@ -1678,159 +2411,6 @@ Não seguem um formato fixo ou tabela.
 
 ### ⚔️ Dados Estruturados X Dados Não Estruturados
 <img src="doc/img/dados-estruturados-vs-dados-nao-estruturados.png" height="500">
-
----
-
-## 👨🏽‍🔬 Profissionais na área de dados
-A área de dados é bem ampla e tem vários papéis, cada um com foco diferente dentro do **ciclo de dados (coleta → processamento → análise → modelagem → produção)**
-
-### 🔷 1. Analista de Dados (Data Analyst)
-
-👉 **Foco:** analisar e gerar insights
-
-#### Funções:
-- Explorar dados (EDA)
-- Criar dashboards (Power BI, Tableau)
-- Fazer consultas SQL
-- Responder perguntas de negócio
-
-#### 📌 Perfil:
-- Mais próximo do negócio
-- Menos foco em modelagem avançada
-
-### 🔷 2. Cientista de Dados (Data Scientist)
-
-👉 **Foco:** modelos preditivos e ML
-
-#### Funções:
-- Construir modelos de Machine Learning
-- Fazer feature engineering
-- Testar hipóteses
-- Avaliar modelos
-
-#### 📌 Usa:
-- Python
-- estatística
-- ML
-
-### 🔷 3. Engenheiro de Dados (Data Engineer)
-
-👉 **Foco:** infraestrutura de dados
-
-#### Funções:
-- Construir pipelines (ETL/ELT)
-- Integrar fontes de dados
-- Trabalhar com Big Data
-- Garantir qualidade e disponibilidade
-
-#### 📌 Tecnologias:
-- SQL
-- Spark
-- Airflow
-
-### 🔷 4. Engenheiro de Machine Learning (ML Engineer)
-
-👉 **Foco:** colocar modelos em produção
-
-#### Funções:
-- Deploy de modelos
-- Criar APIs
-- Monitorar performance
-- Escalar soluções
-
-#### 📌 Ponte entre:
-- Data Science + Engenharia
-
-### 🔷 5. Engenheiro de Analytics (Analytics Engineer)
-
-👉 **Foco:** modelagem de dados para análise
-
-#### Funções:
-- Transformar dados brutos em dados confiáveis para análise
-- Criar camadas analíticas
-- Trabalhar com dbt
-
-👉 Meio termo entre analista e engenheiro
-
-
-### 🔷 6. Especialista em BI (Business Intelligence)
-
-👉 **Foco:** visualização e indicadores
-
-#### Funções:
-- Criar dashboards
-- Definir KPIs
-- Automatizar relatórios
-
-#### 📌 Ferramentas:
-- Power BI
-- Tableau
-
-### 🔷 7. Arquiteto de Dados (Data Architect)
-
-👉 **Foco:** design da arquitetura
-
-#### Funções:
-- Definir estrutura dos dados
-- Escolher tecnologias
-- Planejar armazenamento
-
-👉 Papel mais estratégico
-
-
-### 🔷 8. Engenheiro de MLOps
-
-👉 **Foco:** operacionalizar ML
-
-#### Funções:
-- Automatizar pipelines de ML
-- Versionar modelos
-- Monitorar drift
-- CI/CD para ML
-
-### 🔷 9. Chief Data Officer (CDO)
-
-👉 **Foco:** estratégia de dados
-
-#### Funções:
-- Nível Executivo
-- Governança de dados
-- Estratégia organizacional
-- Cultura data-driven
-- Garante que os dados gerem valor para o negócio
-
-### 🔄 Como eles se conectam
-```bash
-Engenheiro de Dados → prepara dados
-        ↓
-Analista / BI → gera insights
-        ↓
-Cientista de Dados → cria modelo
-        ↓
-ML Engineer / MLOps → coloca em produção
-```
-
-### 💡 Resumo rápido
-| Cargo                          | Foco                                               |
-| ------------------------------ | -------------------------------------------------- |
-| Analista de Dados              | Geração de insights e análises                     |
-| Cientista de Dados             | Modelos preditivos e Machine Learning              |
-| Engenheiro de Dados            | Construção de pipelines e infraestrutura           |
-| Engenheiro de Machine Learning | Deploy e escala de modelos                         |
-| Engenheiro de Analytics        | Modelagem de dados para análise (camada analítica) |
-| BI (Business Intelligence)     | Dashboards e indicadores                           |
-| Arquiteto de Dados             | Estrutura e arquitetura dos dados                  |
-| Engenheiro de MLOps            | Operacionalização e monitoramento de ML            |
-| CDO (Chief Data Officer)       | Estratégia e governança de dados                   |
-
-
-### 🚀 Insight importante
-👉 Não existe “melhor cargo”, existe o que mais combina com você:
-
-- Gosta de negócio **→** Analista / BI
-- Gosta de matemática **→** Cientista
-- Gosta de sistemas **→** Engenheiro
-- Gosta de produção **→** ML Engineer
 
 ---
 
@@ -2616,7 +3196,157 @@ Avalia o quanto o grupo está repondendo ao que se espera encontrar (aqui é nec
 | Validação         | Inferência Estatística | Hold-out, validação cruzada (K-Fold)                            |
 | Seleção de modelo | Inferência Estatística | Teste de hipótese, p-valor, comparação de modelos               |
 
+---
 
+# 👨🏽‍🔬 Profissionais na área de dados
+A área de dados é bem ampla e tem vários papéis, cada um com foco diferente dentro do **ciclo de dados (coleta → processamento → análise → modelagem → produção)**
+
+## 🔷 1. Analista de Dados (Data Analyst)
+
+👉 **Foco:** analisar e gerar insights
+
+#### Funções:
+- Explorar dados (EDA)
+- Criar dashboards (Power BI, Tableau)
+- Fazer consultas SQL
+- Responder perguntas de negócio
+
+#### 📌 Perfil:
+- Mais próximo do negócio
+- Menos foco em modelagem avançada
+
+## 🔷 2. Cientista de Dados (Data Scientist)
+
+👉 **Foco:** modelos preditivos e ML
+
+#### Funções:
+- Construir modelos de Machine Learning
+- Fazer feature engineering
+- Testar hipóteses
+- Avaliar modelos
+
+#### 📌 Usa:
+- Python
+- estatística
+- ML
+
+## 🔷 3. Engenheiro de Dados (Data Engineer)
+
+👉 **Foco:** infraestrutura de dados
+
+#### Funções:
+- Construir pipelines (ETL/ELT)
+- Integrar fontes de dados
+- Trabalhar com Big Data
+- Garantir qualidade e disponibilidade
+
+#### 📌 Tecnologias:
+- SQL
+- Spark
+- Airflow
+
+## 🔷 4. Engenheiro de Machine Learning (ML Engineer)
+
+👉 **Foco:** colocar modelos em produção
+
+#### Funções:
+- Deploy de modelos
+- Criar APIs
+- Monitorar performance
+- Escalar soluções
+
+#### 📌 Ponte entre:
+- Data Science + Engenharia
+
+## 🔷 5. Engenheiro de Analytics (Analytics Engineer)
+
+👉 **Foco:** modelagem de dados para análise
+
+#### Funções:
+- Transformar dados brutos em dados confiáveis para análise
+- Criar camadas analíticas
+- Trabalhar com dbt
+
+👉 Meio termo entre analista e engenheiro
+
+
+## 🔷 6. Especialista em BI (Business Intelligence)
+
+👉 **Foco:** visualização e indicadores
+
+#### Funções:
+- Criar dashboards
+- Definir KPIs
+- Automatizar relatórios
+
+#### 📌 Ferramentas:
+- Power BI
+- Tableau
+
+## 🔷 7. Arquiteto de Dados (Data Architect)
+
+👉 **Foco:** design da arquitetura
+
+#### Funções:
+- Definir estrutura dos dados
+- Escolher tecnologias
+- Planejar armazenamento
+
+👉 Papel mais estratégico
+
+
+## 🔷 8. Engenheiro de MLOps
+
+👉 **Foco:** operacionalizar ML
+
+#### Funções:
+- Automatizar pipelines de ML
+- Versionar modelos
+- Monitorar drift
+- CI/CD para ML
+
+## 🔷 9. Chief Data Officer (CDO)
+
+👉 **Foco:** estratégia de dados
+
+#### Funções:
+- Nível Executivo
+- Governança de dados
+- Estratégia organizacional
+- Cultura data-driven
+- Garante que os dados gerem valor para o negócio
+
+### 🔄 Como eles se conectam
+```bash
+Engenheiro de Dados → prepara dados
+        ↓
+Analista / BI → gera insights
+        ↓
+Cientista de Dados → cria modelo
+        ↓
+ML Engineer / MLOps → coloca em produção
+```
+
+## 💡 Resumo rápido
+| Cargo                          | Foco                                               |
+| ------------------------------ | -------------------------------------------------- |
+| Analista de Dados              | Geração de insights e análises                     |
+| Cientista de Dados             | Modelos preditivos e Machine Learning              |
+| Engenheiro de Dados            | Construção de pipelines e infraestrutura           |
+| Engenheiro de Machine Learning | Deploy e escala de modelos                         |
+| Engenheiro de Analytics        | Modelagem de dados para análise (camada analítica) |
+| BI (Business Intelligence)     | Dashboards e indicadores                           |
+| Arquiteto de Dados             | Estrutura e arquitetura dos dados                  |
+| Engenheiro de MLOps            | Operacionalização e monitoramento de ML            |
+| CDO (Chief Data Officer)       | Estratégia e governança de dados                   |
+
+## 🚀 Insight importante
+👉 Não existe “melhor cargo”, existe o que mais combina com você:
+
+- Gosta de negócio **→** Analista / BI
+- Gosta de matemática **→** Cientista
+- Gosta de sistemas **→** Engenheiro
+- Gosta de produção **→** ML Engineer
 
 #### Fontes
 - https://elisaterumi.substack.com/p/top-8-algoritmos-de-machine-learning
